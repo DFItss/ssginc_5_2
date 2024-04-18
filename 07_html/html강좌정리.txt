@@ -307,3 +307,40 @@ html5 강좌정리
       - new line 만들 때 사용
       - 종료태그 없음.
       - 블럭 레벨 (block level) 스타일 따름
+
+    4) hr 태그
+      - 수평선 제공
+      - 종료태그 없음.
+      - 블럭 레벨 (block level) 스타일 따름
+    
+     5) 텍스트 포맷용 태그 ( 권장안함. CSS로 처리하는 것을 권장 )
+       - <b>hello</b> : 굵은 글자
+       - <i>hello</i> : 이탤릭체 글자
+       - <small>hello</small> : 작은글자
+       - <del>hello</del> : 취소선글자
+       - <ins>hello</ins> : 밑줄글자
+       - <sub>hello</sub> : 아래글자
+       - <sup>hello</sup> : 위글자
+
+      6) a 태그 ( anchor )
+        - 페이지간 링크(연결)시 사용됨.
+	- 인라인 레벨
+	- 기본적으로 방문전(blue), 방문후(purple), 활성화(red,누르고 있을 때) 링크 색상이 달라진다.
+	  css로 변경 가능.
+	- 종류 2가지
+
+	가. 내부링크
+                <a href="target.html#java">target.html내의 java로 바로가기</a> 
+
+	        <a href="#java">java로 바로가기</a>
+                <a href="#sql">sql로 바로가기</a>
+		<a href="#css">css로 바로가기</a>
+
+                <a id="java">여기서부터 JAVA</a> 
+
+	나. 외부링크
+	 문법:
+	     <a href="타겟">링크</a>
+
+	  예> <a href="http://www.google.com">구글</a>
+	     <a href="login.html">로그인페이지</a>
