@@ -66,3 +66,60 @@ html5 강좌정리
 					  ..
 					  MySQL(3306)
 					  ..
+					  Oracle(1521)
+
+
+3. 환경설정
+
+  1) node 설정
+    https://nodejs.org/ 다운받고 설치(기본설치)
+
+    cmd창에서 node -v 입력하고 버전 확인.
+
+  2) VSC 설정
+     - https://code.visualstudio.com/ 다운받고 설치(기본설치)
+     - VSC 확장팩 설치
+
+
+  3) 워크스페이스 작성
+
+4. 웹(web) 개요
+
+  - 1991년에  World Wide Web(WWW) 용어가 처음 나옴.
+  - 1993년에 웹 표준단체 창설 ( W3C )
+     http://www.w3.org
+
+     html표준
+     css표준        -------------------> 웹브라우저실행( 구글, MS, Firefox,...)
+     js표준
+   (java의 인터페이스) -------------------> (인터페이스 구현한 클래스)
+
+  - 모질라(Mozilla)는 가장 빠르게 표준 준수해서 가이드 제공.
+    http://developer.mozilla.org
+
+    html 표준 가이드 : https://developer.mozilla.org/ko/docs/Web/HTML
+    css 표준 가이드:   https://developer.mozilla.org/ko/docs/Web/CSS
+    js 표준 가이드:    https://developer.mozilla.org/ko/docs/Web/JavaScript
+
+   ==> 모든 브라우저가 제안된 표준안을 준수하지 못함.(***********)
+
+5. 웹 표준
+
+  - 기본개념: 
+   특정 기기와 상관없이 누구든지 정보 접근이 가능한 웹을 만들어야 된다.
+   ( 시각장애인일지라도 )
+
+  - 구현방법1
+    역할 분담
+
+    1) html
+       - 데이터 구조 ( 뼈대 ) 담당
+       - *.html
+    2) css
+       - 디자인과 레이아웃 담당
+       - *.css
+    3) javascript
+       - 동적처리 담당
+       - *.js
+
+   ==> 모두 웹브라우저인 클라이언트에서 실행됨. (**************)
