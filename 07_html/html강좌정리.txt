@@ -211,3 +211,47 @@ html5 강좌정리
    port번호: 5500
 
    target컴포넌트: template.html
+
+12. <head>태그의 몸체
+
+ 1) <title>태그
+     - 문서의 타이틀 지정용도
+     - 웹브라우저의 탭에 보임
+     - 즐겨찾기 추가할 때 저장됨
+ 
+  2) <style>태그
+     - css 설정 방법 3가지 중에서 내부 css 스타일 정보 지정용.
+
+      *  css 설정 방법 3가지
+       가. 인라인 CSS 스타일
+          - 시작태그의 style속성에 css를 적용하는 방법
+	  예>  <p style="color:red">Hello1-인라인스타일</p>
+          - 권장안함
+
+       나. 내부 CSS 스타일
+          - <style>태그에서 css적용할 html태그를 선택해서 적용하는 방법.
+	   예>    <head>
+		    <title>style</title>
+		    <style>
+		      #xxx{
+			color:blue;
+		      }
+		    </style>
+		  </head>
+
+	          <p id="xxx">Hello2-내부스타일</p>
+
+       다. 외부 CSS 스타일
+           - *.css 가진 외부파일로 스타일 생성하고
+	      html에서 불러다가 사용함.
+	   -    <link rel="stylesheet" href="external.css">
+        
+  3) <link> 태그
+    - 외부 CSS 스타일
+
+
+
+
+
+
+
