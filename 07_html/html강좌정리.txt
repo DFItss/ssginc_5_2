@@ -247,8 +247,25 @@ html5 강좌정리
 	   -    <link rel="stylesheet" href="external.css">
         
   3) <link> 태그
-    - 외부 CSS 스타일
+    - 외부 CSS 스타일 지정시 사용
+    - favicon 경로지정시 사용
 
+  4) <script> 태그
+    - 자바스크립트 사용
+    - <body>태그안에서도 사용 가능
+    *  JS 설정 방법 2가지
+    
+      가. 내부 
+         - <script>
+              js코드 구현
+	   </script>
+
+      나. 외부
+         - <script src="*.js"></script> 사용
+
+         - 외부파일인 *.js 만들고 
+	   html에서 불러다가 사용.
+     
 
 
 
