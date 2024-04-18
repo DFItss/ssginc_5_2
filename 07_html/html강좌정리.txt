@@ -168,3 +168,33 @@ html5 강좌정리
 
       모든 시작태그에 범용적으로 사용할 수 있는 속성(class, id, style, name등 )이 있고
       태그에 종속적인 속성(예> <a href=""></a> ) 도 있다.
+
+
+8. html 버전
+ 
+ - html5 사용예정
+ - 웹브라우저에 html 버전을 반드시 알려줘야된다.
+   DOCTYPE 이용해서 버전정보를 알려준다.
+
+   문법: html5 doctype 문법
+   
+      <!DOCTYPE html>
+
+9. html 기본구조
+
+    <!DOCTYPE html>
+    <html>
+      <head>
+
+      </head>
+      <body>
+
+
+      </body>
+    </html>
+
+10. html 주석문
+   
+    <!--     
+      <p>Hello</p>
+    -->
