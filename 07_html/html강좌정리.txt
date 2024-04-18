@@ -198,3 +198,16 @@ html5 강좌정리
     <!--     
       <p>Hello</p>
     -->
+
+11. live server
+
+   http://127.0.0.1:5500/template.html
+
+   http: 프로토콜(protocol)
+
+   서버IP: 127.0.0.1 (로컬 의미)
+          localhost
+
+   port번호: 5500
+
+   target컴포넌트: template.html
