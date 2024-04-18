@@ -322,7 +322,7 @@ html5 강좌정리
        - <sub>hello</sub> : 아래글자
        - <sup>hello</sup> : 위글자
 
-      6) a 태그 ( anchor )
+      6) a 태그 ( anchor 태그)
         - 페이지간 링크(연결)시 사용됨.
 	- 인라인 레벨
 	- 기본적으로 방문전(blue), 방문후(purple), 활성화(red,누르고 있을 때) 링크 색상이 달라진다.
@@ -344,3 +344,45 @@ html5 강좌정리
 
 	  예> <a href="http://www.google.com">구글</a>
 	     <a href="login.html">로그인페이지</a>
+
+      - target 속성
+       ==> 링크된 문서를 어디에서 보여줄지를 지정.
+
+        target="_self"  ==> 기본값
+	target="_blank" ==> 새로운 창(탭)에 문서를 open
+
+      예> <a href="http://www.google.com" target="_blank">구글</a>
+
+
+
+14. 경로 지정 ( 매우 중요 )
+ 
+  1) 개념
+   외부파일( target.html, external.css, external.js, my.png, my.jpg,...)을
+   참조할 때 외부파일의 위치(경로)를 알려주는 방법을 의미.
+
+  2) 경로 지정 방법 2가지
+
+   가. 절대 경로
+    - / 로 시작한다.
+     기준은 / 이다. http://127.0.0.1:5500/ 와 동일
+
+   예> http://localhost:5000/sample.html 
+      http://127.0.0.1:5500/app1/sample.html
+
+    만약 경로를 /app1 로 지정하면 http://127.0.0.1:5500/app1/ 동일하다.
+
+   나. 상대 경로
+    -  / 시작안함.
+      시작은 . 또는 .. 또는 그냥 타겟파일(target.html, js, css, png 등) 지정함.
+
+    - 기준은 현재 페이지이다. 즉 main2.html 의 경로가 기준이다.
+
+     예> 
+     현재 경로:  http://127.0.0.1:5500/app2/main2.html
+
+
+     타겟 경로: http://127.0.0.1:5500/app1/sample.html
+
+    - .  : 현재 디렉토리 의미
+      .. : 부모 디렉토리 의미
