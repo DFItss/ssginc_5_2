@@ -157,5 +157,8 @@ html5 강좌정리
      예> 
         <p>hello1</p>
 	<p class="x" id="y" >hello2</p>
-        
-	 
+         
+     속성명은 정해져 있으나 커스텀 속성 가능함.
+     커스텀 속성 문법:  data-속성명="속성값"
+
+     <p class="x" id="y" data-ssg="z" >hello2</p>
