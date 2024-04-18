@@ -299,3 +299,11 @@ html5 강좌정리
 	    <span>,<a>,....
 
 
+    2) p 태그
+     - 문서의 문단(paragraph) 지정 목적
+     - 블럭 레벨 (block level) 스타일 따름
+
+    3) br 태그
+      - new line 만들 때 사용
+      - 종료태그 없음.
+      - 블럭 레벨 (block level) 스타일 따름
