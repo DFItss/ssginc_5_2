@@ -3,7 +3,7 @@ html5 강좌정리
 1. web 아키텍쳐(web architecture)
 
   
-   클라이언트(client):부산                       서버(server):서울 예>쿠팡
+   클라이언트(client):부산                        서버(server):서울 예>쿠팡
   ---------                                   ---------------------
    웹브라우저                                    웹컴포넌트(html,jsp,servlet)
                                                html: 정적 컴포넌트, *.html 파일
@@ -13,7 +13,7 @@ html5 강좌정리
     
     *html인 경우
 
-               1)요청               서버(웹서버: Apache, IIS, ngnix )
+               1)요청               서버(웹서버: Apache, IIS, ngnix, live server )
     웹브라우저   ----------------->   test.html   2) 요청한 html검색( 없으면 404(File Not found) 에러발생)
                <------------------
 	        3) test.html 다운
@@ -51,9 +51,10 @@ html5 강좌정리
   1) 서버의 IP 정보: 210.100.100.3
   2) port 번호: 8080
   3) 타겟 컴포넌트
-                 https://
+                     https://
            요청 URL:  http://서버IP:port번호/타겟
-              http://210.100.100.3:8080/test.html
+	             http://서버IP:port번호/폴더/타겟  
+                     http://210.100.100.3:8080/test.html
            ---------------------------->
  클라이언트                                  서버쪽 PC (210.100.100.3)
 ---------                                --------
@@ -96,7 +97,7 @@ html5 강좌정리
 
   - 모질라(Mozilla)는 가장 빠르게 표준 준수해서 가이드 제공.
     http://developer.mozilla.org
-
+    http://caniuse.com
     html 표준 가이드 : https://developer.mozilla.org/ko/docs/Web/HTML
     css 표준 가이드:   https://developer.mozilla.org/ko/docs/Web/CSS
     js 표준 가이드:    https://developer.mozilla.org/ko/docs/Web/JavaScript
@@ -108,6 +109,7 @@ html5 강좌정리
   - 기본개념: 
    특정 기기와 상관없이 누구든지 정보 접근이 가능한 웹을 만들어야 된다.
    ( 시각장애인일지라도 )
+   https://validator.w3.org/
 
   - 구현방법1
     역할 분담
@@ -129,7 +131,24 @@ html5 강좌정리
   - hyper text markup language 의 약자로서 웹페이지 작성을 위한 언어.
 
   hyper text 의미: 링크 의미
-  markup language 의미: 정보표시용 태그(<>) 의미 
+  markup language 의미: 정보표시용 태그(<>) 의미, 태그명은 정해져 있음.
+
+  - xml (eXtensible Markup Language)
+   ==> 태그명을 임의로 지정 가능.
+       추가로 특정태그로 사용함을 규칙으로 정할수도 있음.
+       규칙은 2가지 방식 이용 가능 ( *.dtd , *.xsd )
+   ==> 용도: 데이터 저장
+
+      예> 홍길동, 20
+        
+	 <person>
+           <name>홍길동</name>
+           <age>20</age>
+	 </person>
+
+    ==> 특징: 플랫폼(OS,프로그램언어)에 독립적
+    ==> 단점: 데이터를 표현하기 위한 메타데이터(meta data)가 필요하게됨.
+             해결하기 위한 방법으로 JSON (JavaScript Object Notation)을 사용함.
 
 7. html 특징
  
