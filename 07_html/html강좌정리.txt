@@ -586,6 +586,36 @@ html5 강좌정리
    - 블럭 레벨
 
 17. 사용자 입력 태그 (*****************)
+ 
+  ==> 반드시 <form> 태그로 감싸야 된다.
+     버튼을 클릭했을 때 사용자 입력값이 서버에 전달될 수 있다.
+    
+   문법:
+        <form>
+          사용자입력태그
+          ..
+
+	  <button>전송</button>
+          <input type="submit" value="전송" >
+	</form?
+ 
 
    가. 단일값 입력
-     <input />
+     <input type="text" name="" >
+
+
+  나. 비번 입력
+     <input type="password" name="" >
+
+  다. radio 
+    ==> 하나만 선택 가능하게 하기 위해서 동일한 name을 지정해야 된다.
+    ==> 초기화 방법: checked 속성 이용
+                   checked="checked"  또는 checked
+     <input type="radio" name="gender" >남
+     <input type="radio" name="gender" checked>여
+
+  라. checkbox
+      <input type="checkbox" name="" >
+
+  마. email
+      <input type="email" name="" >
