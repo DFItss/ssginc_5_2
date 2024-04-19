@@ -631,7 +631,7 @@ html5 강좌정리
      버튼을 클릭했을 때 사용자 입력값이 서버에 전달될 수 있다.
     
    문법:
-        <form action="target.html">
+        <form action="target.html" method="get|post">
           사용자입력태그
           ..
 
@@ -652,7 +652,15 @@ html5 강좌정리
            userid1=aaa&password=1234 <=== query string이라고 부른다.
 	                                  그리고 URL에 포함안됨.
 
-      
+       - 서블릿에서 doGet 메서드가 처리함.
 
     나. POST 방식
+      - URL에 사용자 입력한 폼데이터가 포함되어 전달되지 않지만
+        내부적으로 전달한다.
+      - 표현식: http://127.0.0.1:5500/target.html
+          
+	      userid1=aaa
+	      password=1234
 
+     - 서블릿에서 doPost 메서드가 처리함.
+      만약에 일치하는메서드가 없으면 405 에러가 발생됨.
