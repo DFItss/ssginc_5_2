@@ -212,6 +212,21 @@ html5 강좌정리
       </body>
     </html>
 
+ ==> 계층구조가 생김. 
+    아래 구조를 DOM(Document Object Model) 트리라고 부름(****************)
+
+                 html (루트태그:root tag)
+	          |
+	 head          body
+	  |                 |
+  title link script     p h1  span  p
+                        |
+                       "hello"
+  
+   html 파일을 다운받아서 웹브라우저가 브라우저 메모리에 DOM 트리를 생성한다.
+   그리고 랜더링한다.
+
+
 10. html 주석문
    
     <!--     
