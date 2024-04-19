@@ -605,8 +605,9 @@ html5 강좌정리
 
    가. 단일값 입력
      <input type="text" name="" >
-
-
+     <input type="text" name=""  maxlength="4" required> <=== 반드시 값을 입력 필요. 
+                                                    유효성검사를 클라이언트뿐만 아니라 서버에서도 해야 된다.
+   
   나. 비번 입력
      <input type="password" name="" >
 
@@ -621,9 +622,31 @@ html5 강좌정리
       <input type="checkbox" name="" >
 
   마. email
+    - 이메일형식에 맞게 입력해야 된다.
+      @ 가 없으면 submit 불가
       <input type="email" name="" >
 
+  바. number
+      <input type="number" name="" >
 
+    file
+        <input type="file" name="file"> 
+        <hr>
+    date
+        <input type="date" name="xxx"> 
+        <hr>
+    color
+        <input type="color" name="xxx"> 
+        <hr>
+    textarea
+        <textarea name="description"  cols="30" rows="10"></textarea>
+        <hr>
+    select
+        <select name="학년" >
+          <option value="1학년">1학년</option>
+          <option value="2학년">2학년</option>
+          <option value="3학년">3학년</option>
+        </select>
 
 18. form 태그
 
@@ -663,4 +686,25 @@ html5 강좌정리
 	      password=1234
 
      - 서블릿에서 doPost 메서드가 처리함.
-      만약에 일치하는메서드가 없으면 405 에러가 발생됨.
+      만약에 일치하는메서드가 없으면 405(허용하지 않는 메서드)에러가 발생됨.
+
+
+19. image 보여주기
+  - png, jpg 가능함.
+  - 문법
+    <img src="절대|상대"  width="" height="" alt="대체텍스트" >
+
+20. 화면 재사용하기
+
+   - <iframe src="" ></iframe>
+
+21. 특수문자
+   - html은 스페이스바 및 탭이 적용안됨.
+
+    공백역할: &nbsp;
+     <    : &lt;
+     >    : &gt;
+     "    : &quot;
+     
+ http://www.w3schools.com ( 초급자용 )
+ http://developer.mozilla.org ( 중급이상 )
