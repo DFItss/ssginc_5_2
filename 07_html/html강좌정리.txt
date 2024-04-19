@@ -569,9 +569,11 @@ html5 강좌정리
        <header> : 웹사이트 소개 정보나 메뉴, 로고등이 포함될 수 있음.
                   과거에는 <div id="header"> 형식으로 사용됨.
 		  현재는 <header>로 지정해서 사용됨.
-       <main>
-       <section>
-       <article>
-       <nav>
-       <aside>
-       <footer>
+       <main>   : 웹사이트의 메인 항목 포함.
+                  과거에는 <div id="main"> 형식으로 사용됨.
+       <section>: 실제 문서 내용 포함
+       <article>: 문서내용이 많을 경우에 여러 개의 주제로 나눌수 있음.
+       <nav>    : 사이트의 메뉴나 링크 포함.
+       <aside>  : 배너 광고 포함.
+       <footer> : 회사소개, 저작권 정보등 문서 하단에 배치되는 항목 포함.
+   - 블럭 레벨
