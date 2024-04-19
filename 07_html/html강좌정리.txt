@@ -591,14 +591,17 @@ html5 강좌정리
      버튼을 클릭했을 때 사용자 입력값이 서버에 전달될 수 있다.
     
    문법:
-        <form>
+        <form action="타겟">
           사용자입력태그
           ..
 
 	  <button>전송</button>
           <input type="submit" value="전송" >
-	</form?
- 
+          <input type="button" value="전송" > <== 서버로 전달이 안됨. JS추가해서 전달이 가능.
+	</form>
+       
+
+
 
    가. 단일값 입력
      <input type="text" name="" >
@@ -619,3 +622,37 @@ html5 강좌정리
 
   마. email
       <input type="email" name="" >
+
+
+
+18. form 태그
+
+ ==> 반드시 <form> 태그로 감싸야 된다.
+     버튼을 클릭했을 때 사용자 입력값이 서버에 전달될 수 있다.
+    
+   문법:
+        <form action="target.html">
+          사용자입력태그
+          ..
+
+	  <button>전송</button>
+          <input type="submit" value="전송" >
+          <input type="button" value="전송" > <== 서버로 전달이 안됨. JS추가해서 전달이 가능.
+	</form>
+
+==> 사용자가 입력한 데이터(폼데이터)가 서버로 전달되는 방법 2가지
+
+    가. GET 방식
+      - 기본방식이고 URL에 사용자 입력한 폼데이터가 포함되어 전달된다.
+      - 표현식:
+           http://127.0.0.1:5500/target.html?userid1=aaa&password=1234 
+	   http://localhost:5500/타겟?input태그의name값=입력값&input태그의name값=입력값
+   
+
+           userid1=aaa&password=1234 <=== query string이라고 부른다.
+	                                  그리고 URL에 포함안됨.
+
+      
+
+    나. POST 방식
+
