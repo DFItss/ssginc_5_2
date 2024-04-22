@@ -204,8 +204,9 @@ CSS 강좌정리
      라. class 속성 선택자
       - .class 표현
       - 중복이 가능
-      - 한번에 여러개 지정 가능 ( 예> class="yyy  yyy2")
+      - 한번에 여러개 지정 가능. 공백으로 구분 ( 예> class="yyy  yyy2")
         독립적으로  적용됨.
+	만약 class="xxx  xxx2" 인 경우 나중에 정의된 xxx2가 적용된다.
       예>
          <style>
             .xxx{
