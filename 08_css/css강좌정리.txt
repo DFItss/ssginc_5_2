@@ -267,3 +267,15 @@ CSS 강좌정리
          #xxx ~ p{
 
 	 }
+
+   자. 속성으로 찾기
+      - 특정속성으로 구성된 요소를 찾을 때 사용됨.
+        예> <a href="http://www.daum.net">다음</a>
+	   <a href="https://www.naver.com">네이버</a>
+	   <a href="https://www.navercloud.com">네이버</a>
+           <link href="" >
+      a. 속성명으로 찾기
+        - [속성명] 표현식, 태그명[속성명]
+	예>   a[href]{
+
+	     }
