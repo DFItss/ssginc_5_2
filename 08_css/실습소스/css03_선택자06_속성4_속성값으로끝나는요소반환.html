@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>선택자6-속성4-속성값으로 끝나는 요소 찾아서 반환</title>
+  </head>
+  <style>
+    a[href$="net"]{
+      color: red;
+    }
+
+  </style>
+  <body>
+    <a href="http://naver.com">one</a><br/>
+    <a href="https://naver.com" target="_blank">two</a><br/>
+    <a href="https://daum.net">three</a><br/>
+    <a href="http://daum.net" target="_blank">four</a><br/>
+    <a href="https://korea.com">five</a><br/>
+    <a href="http://korea.com" target="_blank">six</a><br>
+  </body>
+</html>
