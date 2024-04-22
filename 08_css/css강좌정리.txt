@@ -36,10 +36,12 @@ CSS 강좌정리
  2)내부 스타일  ( internal style )
    - html내의 <head>에 <style> 태그이용해서 스타일을 지정하는 방법.
    예>
+    # a.html 
      <head>
        <style>
           p, span{
             color:red;
+
 	  }
        </style>
      </head>
@@ -47,5 +49,26 @@ CSS 강좌정리
       <p>Hello2</p>
       <span>Hello3</span>
      </body>
+  
+   - <style>태그의 css 속성들이 길어질 수 있음.
+     다른 html에서 동일한 css일지라도 중복 정의해야 된다.
 
  3)외부 스타일  ( external style )
+   - html외부에  *.css 가진 외부 파일로 작성하고 
+     필요한 html에서 불러다가 사용. ( <link> 태그 이용 )
+
+   예>  #main.css
+         p, span{
+            color:red;
+
+	  }
+
+      # a.html ( b.html )
+     <head>
+      <link rel="stylesheet" type="text/css" href="main.css" >
+     </head>
+
+     <body>
+      <p>Hello2</p>
+      <span>Hello3</span>
+     </body>
