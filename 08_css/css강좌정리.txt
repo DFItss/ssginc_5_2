@@ -188,3 +188,15 @@ CSS 강좌정리
              color:red;
 	    }
 	 </sytle>
+
+     다. id 속성 선택자
+      - #id 표현
+      - 중복불가 ( 유일하게 지정한다. )
+      예>
+         <style>
+            #xxx{
+             color:red;
+	    }
+	 </sytle>
+
+        <p id="xxx">Hello</p>
