@@ -1,0 +1,51 @@
+금일 4차수 최종 프로젝트 발표 ( 13:00 ~ 14:30 )
+
+CSS 강좌정리
+
+1. 환경설저
+
+   1) node 설정
+    https://nodejs.org/ 다운받고 설치(기본설치)
+
+    cmd창에서 node -v 입력하고 버전 확인.
+
+  2) VSC 설정
+     - https://code.visualstudio.com/ 다운받고 설치(기본설치)
+     - VSC 확장팩 설치
+
+
+  3) 워크스페이스 작성
+
+2. CSS 역할 및 버전
+
+  역할: html에 시각적 표현을 지정해서 스타일 관리.
+
+  css1: 1996년
+  css2: 1998년
+  css3: 현재까지도 개발중. ( 표준화 버전 )
+
+
+3. CSS 적용 방법 3가지
+
+ 1)인라인 스타일 ( inline style )
+   - html내의 시작태그에서 style 속성으로 스타일을 지정하는 방법.
+    예> <p>Hello1</p>
+       <p style="color:red">Hello2</p> 
+       <span style="color:red">Hello3</span> 
+
+ 2)내부 스타일  ( internal style )
+   - html내의 <head>에 <style> 태그이용해서 스타일을 지정하는 방법.
+   예>
+     <head>
+       <style>
+          p, span{
+            color:red;
+	  }
+       </style>
+     </head>
+     <body>
+      <p>Hello2</p>
+      <span>Hello3</span>
+     </body>
+
+ 3)외부 스타일  ( external style )
