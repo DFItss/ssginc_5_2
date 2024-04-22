@@ -233,7 +233,22 @@ CSS 강좌정리
              .select.aaa{   <== class가 select 이면서(그리고 and) class가 aaa인 요소 반환.
 
 	     }
-             .select ,  .aaa{ <== class가 select가 이거나 또는 class가 aaa인 요소 반환.
+             .select,.aaa{ <== class가 select가 이거나( 또는 or) class가 aaa인 요소 반환.
 
 	     }
 	   </style>
+
+     마. 계층구조 1- 자식
+      - 부모선택 > 자식 선택
+      예>
+         #xxx > p{
+
+	 }
+
+     바. 계층구조 2- 자손 ( 공백 )
+      - 부모선택  자손 선택 
+      - 자식포함.
+      예>
+         #xxx  p{
+
+	 }
