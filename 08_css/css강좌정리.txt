@@ -81,7 +81,7 @@ CSS 강좌정리
     인라인 스타일  > 기본적으로는 내부 스타일 > 외부 스타일 
   
 
-4. CSS (Cascading Style Sheet ) 
+4. CSS (Cascading Style Sheet ) 선수 내용
 
  1) 캐스캐이딩 (Cascading)
 
@@ -133,3 +133,31 @@ CSS 강좌정리
 
     명시도 참조사이트:
     https://developer.mozilla.org/en-US/docs/Web/CSS/Specificity
+
+
+
+5. CSS 선택자 ( selector )
+
+  * DOM 트리 계층구조
+
+  - 개별적인 요소를 노드(node)라고 부른다.
+  - 노드 종류 3가지
+    element node: tag 의미
+    text node:   리터럴 값 의미
+    attribute node: 속성의미
+    
+       html
+         |
+   head         body
+    |               |
+  title       div    p    span     a  -   href
+  link         |                   |        |
+  script      div                 "다음"    "daum.net"
+  style        |
+               p
+	       |
+            "hello"
+
+  1) 개념
+   
+    
