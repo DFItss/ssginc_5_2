@@ -274,8 +274,15 @@ CSS 강좌정리
 	   <a href="https://www.naver.com">네이버</a>
 	   <a href="https://www.navercloud.com">네이버</a>
            <link href="" >
+
       a. 속성명으로 찾기
         - [속성명] 표현식, 태그명[속성명]
 	예>   a[href]{
+
+	     }
+
+      b. 속성명="속성값"으로 찾기
+        - [속성명="속성값"] 표현식, 태그명[속성명="속성값"]
+	예>   a[href="http://www.daum.net"]{
 
 	     }
