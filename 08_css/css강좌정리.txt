@@ -176,3 +176,15 @@ CSS 강좌정리
 	    }
 	 </sytle>
     
+    나. 태그선택자
+      - 태그명으로 표현
+        만약에 여러개 표현할때는 ,(쉼표) 지정하고 사용.
+      예>
+         <style>
+            p{
+             color:red;
+	    }
+	    p, div, #xx, .yy{
+             color:red;
+	    }
+	 </sytle>
