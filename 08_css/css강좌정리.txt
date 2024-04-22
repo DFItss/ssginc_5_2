@@ -200,3 +200,24 @@ CSS 강좌정리
 	 </sytle>
 
         <p id="xxx">Hello</p>
+
+     라. class 속성 선택자
+      - .class 표현
+      - 중복이 가능
+      - 한번에 여러개 지정 가능 ( 예> class="yyy  yyy2")
+        독립적으로  적용됨.
+      예>
+         <style>
+            .xxx{
+             color:red;
+	    }
+	    .xxx2{
+             color:blue;
+	    }
+	 </sytle>
+
+        <p class="xxx">Hello</p>
+        <span class="xxx">Hello</span>
+
+        .. 
+        <span class="xxx2">Hello</span>
