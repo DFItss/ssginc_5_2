@@ -146,9 +146,11 @@ CSS 강좌정리
     text node:   리터럴 값 의미
     attribute node: 속성의미
     
+    nodelist : 같은 부모의 자식의 모임(배열로 받음)
+
        html
          |
-   head         body
+   head           body
     |               |
   title       div    p    span     a  -   href
   link         |                   |        |
@@ -159,5 +161,18 @@ CSS 강좌정리
             "hello"
 
   1) 개념
-   
+
+   - DOM의 요소를 접근(선택)하는 방법.
+
+  2) 문법
+
+    가. 전체선택자
+       - *  표현
+       - DOM 트리에 있는 모든 태그가 선택됨.
+     예>
+         <style>
+            *{
+             color:red;
+	    }
+	 </sytle>
     
