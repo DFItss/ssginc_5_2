@@ -425,4 +425,33 @@ CSS 강좌정리
 
 
   3) 의사 요소 (pseudo elements)
-    문법:  ::요소
+    - 문법:  ::요소
+    - 의사클래스와 다르게 요소의 특정부분의 스타일을 지정할 수 있다. 
+      의사클래스는 전체(whole) 스타일 적용되고
+      의사요소는 부분(part)스타일이 적용됨.
+
+    가. 문단의 첫줄 선택
+
+         p::first-line{}
+      예>
+         <p>
+            hello1<br>
+            hello2<br>
+	    hello3<br>
+	 </p>
+
+    나. 텍스트의 첫 글자
+        
+	p::first-letter{
+
+	}
+
+    다. 특정요소 컨텐츠(content,body)앞에 삽입 / 뒤에 삽입
+
+       p::before{
+          content:'값'
+       }
+
+       p::after{
+          content:'값'
+       }
