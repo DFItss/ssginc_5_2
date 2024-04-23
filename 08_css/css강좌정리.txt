@@ -528,6 +528,7 @@ CSS 강좌정리
       지정된 width와 height가 content의 width와 height 가 아니다.
       기본적으로 항상 지정된 값보다 크게 보임.
       이유는 padding과 border 관여가 된다.
+      margin는 제외됨.
 
 
 
