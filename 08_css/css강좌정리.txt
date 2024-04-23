@@ -322,5 +322,67 @@ CSS 강좌정리
 	     }
 
 
+6.  의사 클래스 (pseudo class ) 와 의사 요소 (pseudo elements)
 
-    *BEM 패턴
+  1) 개념
+   - 이름안에 어떤 기능인지를 내포하고 있음.
+
+
+  2) 의사클래스(pseudo class )
+    -문법: :클래스명
+    -기능:스타일 지정하거나 마우스오버 및 a태그의 3가지 상태(state)인
+         방문전(blue), 방문후(purple), 활성화(red,누르고 있을 때) 링크 색상을 변경할 수 있음.
+
+     가. a태그의 link 의사 클래스
+
+        a:link{color:red;}        /* 방문전  */ 
+	a:visited{color:green;}   /* 방문후  */ 
+	a:hover{color:yellow;}    /* 마우스 오버  */ 
+	a:active{color:blue;}      /* 누르고 있을 때  */ 
+
+     나. input태그 focus 클래스  <---> blur: focus 잃어버렸을 때
+        
+	 input:focus{
+            background-color:yellow;
+	 }
+  
+     * DOM 트리에서 자식 선택하는 의사 클래스 ( 지정된 태그의 부모가 기준(******))
+     다. 지정된 태그의 부모기준인 첫번째 자식
+
+        선택자:first-child{
+
+	}
+
+       예>
+           p태그를 찾고 찾은 p태그의 첫 번째 자식을 반환. (X)
+	   p태그의 부모를 찾고 그 부모의 첫번째 자식인 p태그 반환 (o)
+           p:first-child{
+
+	   }
+
+     라. 지정된 태그의 부모기준인 마지막 자식
+        
+	 선택자:last-child{
+
+	  }
+
+     마. 지정된 태그의 부모기준인 유일한 자식
+
+          선택자:only-child{
+
+	  }
+ 
+     바. 지정된 태그의 부모기준인 n번째 자식 ( 1부터 시작 )
+
+          선택자:nth-child(n){
+
+	  }
+          선택자:nth-child(2n){   <== 짝수번째, n에 1부터 시작해서 2,3,4 치환됨.
+
+	  }
+          선택자:nth-child(2n+1){   <== 홀수번째.
+
+	  }
+
+  3) 의사 요소 (pseudo elements)
+    문법:  ::요소
