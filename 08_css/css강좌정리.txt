@@ -610,3 +610,108 @@ CSS 강좌정리
 	 *{
             margin:0px;
 	 }
+  
+  ==> margin의 여백 상쇄
+  
+     인접한 Box의  margin는 서로 겹쳐질수 있는데 
+     하나로 합쳐져서 margin 만들어지는 것이 아니고 큰 크기의 여백으로 적용된다.
+     이유는 요소간 거리가 너무 멀어지는것을  방지한다.
+     만약에 필요하면 명시적으로 margin-top|margin-bottom 을 지정해야 된다.
+  
+  ==> margin:auto;  수평정렬 가능
+     반드시 block 레벨이면서 width 값을 가져야 된다.
+     inline 레벨에서는 동작안됨.
+
+
+10. padding 
+
+ 1) 기능
+   - content와 border 사이의 여백(안쪽 여백) 제어.
+   - px와 % 지정 가능
+
+ 2) 문법1
+   - 개별적으로 요소 지정
+
+     padding-top:10px;
+     padding-right:10px;
+     padding-bottom:10px;
+     padding-left:10px;
+
+ 2) 문법2 - 축약표현
+
+   가. padding: top  right  bottom left
+
+      padding: 10px 10px 10px 10px;
+
+   나. padding: top  right|left bottom
+
+      padding: 10px 10px 10px;
+
+   다. padding: top|bottom  right|left 
+
+      padding: 10px 10px;
+
+   라. padding: top|bottom|right|left 
+
+      padding: 10px ;
+
+11. border
+
+  1) 개요
+    - 테두리
+    - margin과 padding 사이에 둘러싸인 요소.
+    - 3가지 속성이용해서 스타일링 가능
+
+      가. width: border의 두께
+      나. style: border 스타일( 실선, 점선, ...)
+      다. color: border 색상
+
+
+  2) 표현식1 
+  
+     가.width
+     border-top-width:5px;
+     border-right-width:5px;
+     border-bottom-width:5px;
+     border-left-width:5px;
+
+     나.style
+     border-top-style:solid|dotted|dashed;
+     border-right-style:solid|dotted|dashed;
+     border-bottom-style:solid|dotted|dashed;
+     border-left-style:solid|dotted|dashed;
+
+     다.color
+    border-color: red;
+
+ 2) 표현식2-축약
+  
+     가.width
+
+       border-width: top right bottom left;
+       border-width: top right|left bottom;
+       border-width: top|bottom right|left;
+       border-width: top|right|left|bottom;
+
+     
+     나.style
+       border-style: top right bottom left;
+       border-style: top right|left bottom;
+       border-style: top|bottom right|left;
+       border-style: top|right|left|bottom;
+
+ 2) 표현식3-축약 (*************)
+
+       border: width style color;
+     
+     예> border: 3px  solid red;
+
+
+ 3) border-radius 속성
+   
+     - 박스 모서리를 둥글게 설정할 때 사용
+     - 값이 클수록 많이 둥그러짐.
+
+        border-radius: 20px;
+        border-radius: 50%;   // 원   
+   
