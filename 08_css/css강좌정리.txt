@@ -563,3 +563,50 @@ CSS 강좌정리
 	   }
 
 
+9. margin 
+
+ 1) 기능
+   - Box와 Box 사이의 여백(바깥쪽 여백) 제어.
+   - px와 % 지정 가능
+
+ 2) 문법1
+   - 개별적으로 요소 지정
+
+     margin-top:10px;
+     margin-right:10px;
+     margin-bottom:10px;
+     margin-left:10px;
+
+ 2) 문법2 - 축약표현
+
+   가. margin: top  right  bottom left
+
+      margin: 10px 10px 10px 10px;
+
+   나. margin: top  right|left bottom
+
+      margin: 10px 10px 10px;
+
+   다. margin: top|bottom  right|left 
+
+      margin: 10px 10px;
+
+   라. margin: top|bottom|right|left 
+
+      margin: 10px ;
+
+   ==> 축약된 표현식은 개발자도구에서 
+     어떻게 축약되었는지를 보여준다.
+
+   ==> body태그가 기본적으로 margin:8px 가짐.
+       이 값이 브라우저의 기본값이다.
+
+         body {
+	    display: block;
+	    margin: 8px;
+	}
+
+	 일반적으로 이 값을 제거하고 요소가 페이지의 바로 배치되도록 수정해서 사용한다
+	 *{
+            margin:0px;
+	 }
