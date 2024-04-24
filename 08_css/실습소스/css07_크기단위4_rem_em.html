@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>크기단위4- rem_em</title>
+    <style>
+   
+      #a li{
+        font-size: 1.2em;
+      }
+
+      #b li{
+        font-size: 1.2 rem;
+      }
+
+      #x{
+        font-size: 1rem;
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <p>Hello</p>
+    <p id="x">Hello2</p>
+    <ul id="a">
+    <li>AAAA(16*1.2=19.2px)</li>
+    <li>AAAA2</li>
+    <li>
+    <ul>
+    <li>BBBB(16*1.2*1.2=23.04px)</li>
+    <li>BBBB2</li>
+    </ul>
+    </li>
+    </ul>
+    
+    <ul id="b">
+    <li>AAAA(16*1.2)</li>
+    <li>AAAA2</li>
+    <li>
+    <ul>
+    <li>BBBB(16*1.2)</li>
+    <li>BBBB2</li>
+    </ul>
+    </li>
+    </ul>
+  </body>
+</html>
