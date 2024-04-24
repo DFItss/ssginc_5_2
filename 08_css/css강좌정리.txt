@@ -935,10 +935,45 @@ CSS 강좌정리
 
     나. 상대 길이(크기)
 
-       a. 뷰포트(viewport) 기준
-          - vw, vh ( viewport widht,  viewport height )
+       a. vw, vh ( viewport width,  viewport height )
+          - 뷰포트(viewport) 기준
           * position:fixed + width|height 로도 뷰포트 기준으로 길이(크기)설정 가능
         
-       b. 글꼴 길이에 사용할 때 웹브라우저의 기본글꼴크기(기본: 16px)가 기준
-         - rem(*****), em
+       b. rem(*****), em 
+         - 글꼴 길이에 사용할 때 웹브라우저의 기본 글꼴크기(기본: 16px)가 기준
 	 예> 1rem = 16px
+
+       c. %
+
+         c-1) 기본은 부모요소 기준이다.
+
+	    예>
+	       <div> <== width:100px
+	         <div> <== width:50% ( 부모인 width:100px의 50% 확보. 실제값은 50px이 됨 )
+
+	 c-2) position:fixed + %
+
+	     예>
+	       <div> <== width:100px
+	         <div> <== position:fixed; width:50% ( 뷰포트의 50% 확보.)
+
+	    - 화면크기를 변경하면 자동으로 설정된 크기도 변경된다.
+
+         c-2) position:relative + %
+
+	     예>
+	       <div> <== width:100px
+	         <div> <== position:relative; width:50% ( 부모인 width:100px의 50% 확보. 실제값은 50px이 됨 )
+
+            - 만약에 부모가 인라인 레벨이면 적용안됨
+
+	  
+	  c-3) position:absolute + %
+
+	       예>
+	       <div> <== position:relative;width:100px
+	         <div> <== position:absolute; width:50% ( 부모인 width:100px의 50% 확보. 실제값은 50px이 됨 )
+
+	     - 부모를  position:relative 지정하고 사용해야됨.
+	       지정하면 자식은 부모의 width를 참조하여 %가 적용됨.
+
