@@ -205,7 +205,7 @@ CSS 강좌정리
 
         <p id="xxx">Hello</p>
 
-     라. class 속성 선택자
+     라. class 속성 선택자 (**********)
       - .class 표현
       - 중복이 가능
       - 한번에 여러개 지정 가능. 공백으로 구분 ( 예> class="yyy  yyy2")
@@ -322,7 +322,7 @@ CSS 강좌정리
 	     }
 
 
-6.  의사 클래스 (pseudo class ) 와 의사 요소 (pseudo elements)
+6. 의사코드 (의사 클래스 (pseudo class ) 와 의사 요소 (pseudo elements))
 
   1) 개념
    - 이름안에 어떤 기능인지를 내포하고 있음.
@@ -333,7 +333,7 @@ CSS 강좌정리
     -기능:스타일 지정하거나 마우스오버 및 a태그의 3가지 상태(state)인
          방문전(blue), 방문후(purple), 활성화(red,누르고 있을 때) 링크 색상을 변경할 수 있음.
 
-     가. a태그의 link 의사 클래스
+     가. a태그의 link 의사 클래스 ( 순서가 중요 )
 
         a:link{color:red;}        /* 방문전  */ 
 	a:visited{color:green;}   /* 방문후  */ 
@@ -449,11 +449,11 @@ CSS 강좌정리
     다. 특정요소 컨텐츠(content,body)앞에 삽입 / 뒤에 삽입
 
        p::before{
-          content:'값'
+          content:'값'|url('images/001.png')
        }
 
        p::after{
-          content:'값'
+          content:'값'|url('images/001.png')
        }
 
 ################################################
@@ -510,6 +510,7 @@ CSS 강좌정리
 
 	  px: 절대값
 	  %: 상대값. 기준은 가장 가까운 부모요소이다.
+	           하지만 position(static,fixed,relative,absolute)에 따라서 기준이 달라질 수 있음.
 	     만약에 부모가 100px이고 자식이 50% 라면 실제 자식너비는 50px이다.
 
    다. height
@@ -528,14 +529,14 @@ CSS 강좌정리
       지정된 width와 height가 content의 width와 height 가 아니다.
       기본적으로 항상 지정된 값보다 크게 보임.
       이유는 padding과 border 관여가 된다.
-      margin는 제외됨.
+      margin는 제외됨. ( margin는 여백상쇄가 발생되기 때문에 width와 height 사용시 고려대상이 아님)
 
 
 
 8. box-sizing 속성
 
   1) 개념
-     요소의 너비와 높이를 계산하는 방식이다.
+     요소의 너비(width)와 높이(height)를 계산하는 방식이다.
 
   2) 종류
 
@@ -549,7 +550,7 @@ CSS 강좌정리
           최종 width = 지정 width 값 + (2*padding) + (2*border)
 	  최종 height = 지정 height 값 + (2*padding) + (2*border)
 
-    나. border-box 개념
+    나. border-box 개념 (*****************)
         - content-box와 다르게 자동으로  padding+border 값이 포함되어
 	  width와 height값이 정해지는 방식이다.
 
@@ -618,7 +619,7 @@ CSS 강좌정리
      이유는 요소간 거리가 너무 멀어지는것을  방지한다.
      만약에 필요하면 명시적으로 margin-top|margin-bottom 을 지정해야 된다.
   
-  ==> margin:auto;  수평정렬 가능
+  ==> margin:auto;  수평 가운데 정렬 가능
      반드시 block 레벨이면서 width 값을 가져야 된다.
      inline 레벨에서는 동작안됨.
 
@@ -715,3 +716,18 @@ CSS 강좌정리
         border-radius: 20px;
         border-radius: 50%;   // 원   
    
+##########################################
+12. 요소 배치 ( position)
+
+   1) display  속성
+    
+      가. 개념
+       요소를 어떻게 배치할지를 제어가 가능한 속성.
+       블럭레벨로 배치/인라인 레벨로 배치/랜더링 방지/인라인처럼 배치되지만widht와height지정가능
+
+        display:block;
+	display:inline;
+	display:none;  // 영역유지 안됨.
+	display:inline-block;
+
+   2) position 속성
