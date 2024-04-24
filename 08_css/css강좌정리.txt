@@ -936,8 +936,23 @@ CSS 강좌정리
     나. 상대 길이(크기)
 
        a. vw, vh ( viewport width,  viewport height )
-          - 뷰포트(viewport) 기준
-          * position:fixed + width|height 로도 뷰포트 기준으로 길이(크기)설정 가능
+          - 뷰포트(viewport) 기준으로 너비 설정 방법 2가지
+          첫째:
+               position:fixed + width|height 로도 뷰포트 기준으로 길이(크기)설정 가능
+		
+               .x{
+		  position:fixed;
+                  width: 50%;
+		  height: 50%;
+	       }
+
+	   둘째:
+	       .x{
+	          position:fixed|relative|absolute  지정과 무관하게 동작됨.
+                  width: 50 vw;
+		  height: 50 vh;
+	       }
+
         
        b. rem(*****), em 
          - 글꼴 길이에 사용할 때 웹브라우저의 기본 글꼴크기(기본: 16px)가 기준
