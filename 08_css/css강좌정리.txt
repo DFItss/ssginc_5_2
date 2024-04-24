@@ -776,3 +776,48 @@ CSS 강좌정리
                  
 		  - <div id="a">  기준
 		  - top,left,right,bottom 속성이 적용이 됨.
+
+
+       position:fixed
+	   ==> 배치 컨텍스트(기준)는 뷰포트(view port ) 이다.
+               top,left,right,bottom 속성이 적용이 됨.
+	       스크롤해도 고정되어 있음.
+
+    * 정리
+      
+      static와 relative는 문서 대열 (document flow, normal flow)에서 제외가 안됨.
+      absolute 와 fixed  문서 대열 (document flow, normal flow)에서 제외됨.
+      따라서 요소들이 겹쳐서 랜더링 될 수 있다.
+
+       position:sticky
+          ==> 최근에 추가된 기능임. 따라서 caniuse.com 에서 지원여부 확인 할 것.
+	      static 과 fixed 합쳐진 기능.
+	      평상시에는 특정한 임계점에 오면 fixed 처럼 동작됨.
+		
+         예>
+	       position:sticky;
+	       top:30px;
+
+
+     3) z-index 속성
+
+        가. 개념
+	   absolute 와 fixed  문서 대열 (document flow, normal flow)에서 제외됨.
+           따라서 요소들이 겹쳐서 랜더링 될 수 있다.
+	   stack에 요소들을 쌓게 된다.
+
+	나. 요소 배치하는 방식 3가지
+
+	  x축으로 배치: 왼쪽에서 오른쪽 배치 ( 인라인 )
+	  y축으로 배치: 위에서 아래 배치 ( 블럭 )
+	  z축으로 배치: 깊이
+
+	다. 특징
+	   - z-index:auto; 기본값임 ( z-index: 0 과 동일 )
+	   - 값이 작을 수록 stack 밑에 배치된다.
+
+                     (양수)
+                   0 (기본)
+		     (음수)
+
+	    - 반드시 position이 지정되어야 한다. ( static 제외 )
