@@ -886,3 +886,25 @@ CSS 강좌정리
 			       px(x축)  px(y축)
 			       % (x축)
                                % (x축) %(y축)
+   
+   6)  이미지가 scroll 여부 제어
+    
+    - background-attachment 속성
+    - 문법:
+            background-attachment:scroll|fixed;
+
+    7) 이미지를 border 및 padding 및 content 영역까지 설정
+
+     - background-clip 속성
+     - 문법:
+
+         background-clip:border-box|padding-box|content-box;
+
+
+    border-box: 기본, 배경이미지가 border(테두기)까지 차지함. 
+                z축 순서상 배경이미지와 border가 겹쳐서 보임.
+  
+    padding-box: 배경이미지가 padding(안쪽여백)까지 차지함.
+                 border까지 차지안함.
+
+    content-box: 배경이미지가 content 까지 차지함.
