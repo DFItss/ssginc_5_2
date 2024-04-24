@@ -908,3 +908,37 @@ CSS 강좌정리
                  border까지 차지안함.
 
     content-box: 배경이미지가 content 까지 차지함.
+
+  
+
+ ##########################################
+14. 크기 단위 ( units )
+
+  1) 단위 종류
+   
+     - px
+     - %
+     - rem, em
+     - vw, vh ( viewport widht,  viewport height )
+     
+  2) 사용가능한 속성
+
+     - width/height
+     - font-size
+     - margin/padding/border
+     - top/right/bottom/left
+
+  3) 크기종류
+
+    가. 절대 길이(크기)
+      - px 만 사용하자.
+
+    나. 상대 길이(크기)
+
+       a. 뷰포트(viewport) 기준
+          - vw, vh ( viewport widht,  viewport height )
+          * position:fixed + width|height 로도 뷰포트 기준으로 길이(크기)설정 가능
+        
+       b. 글꼴 길이에 사용할 때 웹브라우저의 기본글꼴크기(기본: 16px)가 기준
+         - rem(*****), em
+	 예> 1rem = 16px
