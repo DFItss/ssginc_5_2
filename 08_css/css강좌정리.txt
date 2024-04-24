@@ -731,3 +731,48 @@ CSS 강좌정리
 	display:inline-block;
 
    2) position 속성
+    
+      가. 개요
+      - display 속성은 요소가 배치되는 기본적인 규칙만 변경할 수 있다. ( 블럭레벨, 인라인레벨)
+      - top,left,right,bottom 속성을 이용해서 요소의 실제위치를 바꿀수 있다.
+
+
+      나. 용어
+       
+          배치 컨텍스트(positioning context): 누구를 기준으로 삼을건지를 결정하는 용어.
+	  문서 대열 ( document flow): 웹브라우저에 요소가 기본적으로 배치되는 용어.
+
+      다. 종류
+
+        position:static
+	  ==> 기본.
+	      기본적인 문서 대열 ( document flow, normal flow)를 따른다.
+	      따라서 임의적으로 위치변경이 불가능하다.
+	      즉 top,left,right,bottom 속성이 적용이 안됨.
+	      역으로 top,left,right,bottom 속성이 적용될려면 static이 아닌 다른값으로 지정해야 된다.
+
+        position:relative
+	   ==> 배치 컨텍스트(기준)는 기본적인 문서 대열(document flow, normal flow)이다.
+               top,left,right,bottom 속성이 적용이 됨.
+
+        
+        position:absolute
+	   ==> 배치 컨텍스트(기준)는 가장 가까운 부모(조상)이다.
+	   ==> 2가지 상황이 있음
+	     가. 부모(조상)에 position 없는 경우
+               예>
+	          <body>
+	           <div id="a">  <== position:static 또는 지정안한 경우
+		     <div id="b"> <== position:absolute
+
+	         - html(body) 기준
+		 - top,left,right,bottom 속성이 적용이 됨.
+
+              나. 부모(조상)에 position:relative 있는 경우
+               예>
+	          <body>
+	           <div id="a">  <== position:relative 
+		     <div id="b"> <== position:absolute
+                 
+		  - <div id="a">  기준
+		  - top,left,right,bottom 속성이 적용이 됨.
