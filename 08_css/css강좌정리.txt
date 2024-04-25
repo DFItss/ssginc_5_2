@@ -1064,3 +1064,96 @@ CSS 강좌정리
       - alpha값은 0이면 완전투명, 1이면 완전불투명
 
      예> color: rgba(15, 184, 226, 0.3);
+
+ ##########################################
+16. visibility 속성
+
+  용도: 요소를 보이거나 보이지 않게 동작.
+
+  문법:
+
+      visibility:visible(기본)|hidden|collapse
+
+   * display:none  vs visibility:hidden
+
+     display:none 은 영역유지 안됨.
+     visibility:hidden 는 영역유지가 됨.
+
+
+  - visibility:collapse 는 <table> 를 안보이게 처리(영역유지 안됨)
+
+
+##########################################
+17. 투명도(opacity) 속성
+
+ - 요소의 투명도 제어
+ - 0~1 사용 ( 0:완전투명, 1:완전불투명)
+
+ 예> opacity:0.3
+
+
+##########################################
+18. 글꼴(font) 관련
+
+  1) 스타일 속성
+
+    font-style:normal|italic|oblique|..
+
+  2) 두께 속성
+
+    font-weight:bold|bolder|lighter|100~900
+
+  3) 사이즈 속성
+   
+    font-size:rem(*)|px
+
+  4) 글꼴 속성
+
+   - font-family: 값1, 값2, 값3;
+
+   - 값에 지정가능한 이름 2가지
+
+    가. generic family ( 실제 글꼴들의 카테고리라고 생각하자 )
+       - 웹브라우저에서 기본적으로 제공
+       - 여러 폰트가 가지는 특별한 주요 특징을 가짐.
+       - 종류:  serif
+               sans-serif
+	       monospace(고정폭글꼴)
+	       cursive(필기체)
+	       산술글꼴
+
+    나. font family
+       - generic family에 속하는 실제 글꼴의미.
+
+       대표:
+            serif: Tims New Roman, Geogia
+            sans-serif: consolas
+            monospace: ..
+
+    결론:
+      글꼴들의 특징을 담은 generic family가 있고
+      그 안에 공통특징은 공유하지만 생김새는 다른 여러 다양한 font family가 있다고 생각하자.
+
+
+   - 웹브라우저가 글꼴(font)를 결정하는 방법
+
+      가. font-family를 명시적으로 지정하지 않은 경우
+         - 웹브라우저의 표준글꼴에 설정된 font family로 랜더링된드
+	 현재 설정된 표준글꼴인 font family는 Malgun Gothic이다.
+	 따라서 웹 브라우저에서 출력되는 글꼴은 Malgun Gothic임.
+	  
+	 글꼴확인 방법은 마우스 오버 또는 개발자도구에서 computed 탭 클릭하면 됨.
+
+      나. font-family를 명시적으로 지정한 경우
+
+        
+	  a. generic family 
+
+
+	    font-family: serif;
+	     <== 웹브라우저의 글꼴설정에서 정의된 serif에 해당하는 실제 font family로 랜더링이 된다.
+	       현재는 Batang 글꼴임.
+
+	    font-family: sans-serif;
+	      <== 웹브라우저의 글꼴설정에서 정의된 san serif에 해당하는 실제 font family로 랜더링이 된다.
+	       현재는 Malgun Gothic 글꼴임.
