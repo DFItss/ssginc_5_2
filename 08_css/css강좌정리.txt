@@ -1250,6 +1250,69 @@ CSS 강좌정리
 	 </div>
 
 
+    3) Container에서 사용 가능한 속성
+        
+	* 2가지 축
+	 주축: item이 배치되는 방향의미
+	      기본은 row
+
+	 교차축: 주축의 수직인 방향의미.
+
+       가. flex-direction 속성
+          - 주축의 방향 결정
+	  - 속성값:
+
+	     row : 기본값, 왼--->오
+	     row-reverse: 오---->왼
+
+	     column: 위-->아래
+             column-reverse: 아래 --> 위
+ 
+       나. flex-wrap
+
+           - 화면크기를 줄일때 어느정도까지는 축소되고 item이 안보이게 된다.
+	     축소되지않고 새로운 줄에 랜더링이 가능하도록 제어.
+
+	    -속성값:
+
+	      nowrap : 기본
+	      wrap   : 상단기준 ( 아래쪽에 wrap 됨)
+	      wrap-reverse: 하단기준 ( 위쪽으로 wrap 됨 )
+
+           - 특징
+	     wrap 되면 기존의 최대 height가 아닌
+	     컨텐츠의 height만 차지함.
+	     계속 화면을 줄이면 하나의 열로 표시됨.
+
+        다. flex-flow 
+          flex-direction 와 flex-wrap 의 축약표현식
+
+	  문법: flex-flow:  direction   wrap
+
+	  예> flex-flow: row wrap;
+
+
+        라.  align-items
+            - 교차축에 대한 정렬
+            - 속성값
+	      
+	       flex-start
+	       flex-end
+	       center
+	       baseline : item의 실제 컨텐츠의 기준에 맞춰 정렬됨.
+	       stretch : 기본값. 기본적으로 item을 늘려서 Container를 꽉 채운다.
+
+
+	마.  justify-content
+	    - 주축에 대한 정렬
+            - 속성값
+
+               flex-start
+	       flex-end
+	       center
+	       space-around
+	       space-between
+	       space-evenly
 
 22. Grid
 
