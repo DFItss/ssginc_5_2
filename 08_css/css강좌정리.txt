@@ -1314,6 +1314,34 @@ CSS 강좌정리
 	       space-between
 	       space-evenly
 
+         바. align-content
+             - 반드시 wrap된 상태에서만 적용가능. nowrap 적용안됨.
+	     - align-items + justify-content 합성 기능.
+             속성값
+	       flex-start
+	       flex-end
+	       center
+	       baseline : item의 실제 컨텐츠의 기준에 맞춰 정렬됨.
+	       stretch 
+               space-around
+	       space-between
+	       space-evenly
+
+      4) item에서 사용 가능한 속성
+
+         가) order 속성
+	   - 기본적으로 코드에 지정된 순서로 표시된다.
+	     order를 이용해서 나타내는 순서를 변경할 수 있다.
+           - order:0 기본값
+
+	       -1      0        1
+	       (앞)  (기본값)    (뒤)
+ 
+         나) algin-self 속성
+	   - align-items ? Container에 지정해서 모든 item들의 교차축 정렬 제어.
+           - algin-self ? 개별적인 item의 교차축 정렬.
+
+
 22. Grid
 
    - 부트스트랩 프레임워크(*.css) 이용해서 화면구현해야 됨.
