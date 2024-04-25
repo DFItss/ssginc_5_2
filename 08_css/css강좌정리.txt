@@ -1182,4 +1182,20 @@ CSS 강좌정리
     get embed code 선택 >  <link> 와 css 복사해서 사용.
 
 
-  
+20. text 관련 속성
+  1) 색상
+     color: red
+  2) 수평 정렬
+    text-align:center|left|right|justify(양쪽정렬)
+  3) 밑줄 및 취소선
+    text-decoration: underline|overline|line-throuth
+  4) 대소문자, 첫글자 대문자
+    text-transform:uppercase|lowercase|capitalize
+  5) 첫라인 들여쓰기
+     text-indent:10px;
+  6) 줄간격
+    - font-size:16px 에 비례해서 적용됨
+    line-height: 값
+    예>   line-height: 1
+         line-height: 2
+	 line-height: 0.8
