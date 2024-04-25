@@ -728,7 +728,7 @@ CSS 강좌정리
         display:block;
 	display:inline;
 	display:none;  // 영역유지 안됨.
-	display:inline-block;
+	display:inline-block(*****);
 
    2) position 속성
     
@@ -740,7 +740,7 @@ CSS 강좌정리
       나. 용어
        
           배치 컨텍스트(positioning context): 누구를 기준으로 삼을건지를 결정하는 용어.
-	  문서 대열 ( document flow): 웹브라우저에 요소가 기본적으로 배치되는 용어.
+	  문서 대열 ( document flow, normal flow): 웹브라우저에 요소가 기본적으로 배치되는 용어.
 
       다. 종류
 
@@ -912,7 +912,7 @@ CSS 강좌정리
   
 
  ##########################################
-14. 크기 단위 ( units )
+14. 크기 단위 ( units, ******)
 
   1) 단위 종류
    
@@ -931,11 +931,12 @@ CSS 강좌정리
   3) 크기종류
 
     가. 절대 길이(크기)
-      - px 만 사용하자.
+      - px 만 사용하자. ( cm, inch,... )
 
     나. 상대 길이(크기)
 
        a. vw, vh ( viewport width,  viewport height )
+          - position 여부와 무관.
           - 뷰포트(viewport) 기준으로 너비 설정 방법 2가지
           첫째:
                position:fixed + width|height 로도 뷰포트 기준으로 길이(크기)설정 가능
@@ -957,6 +958,7 @@ CSS 강좌정리
        b. rem(*****), em 
          - 글꼴 길이에 사용할 때 웹브라우저의 기본 글꼴크기(기본: 16px)가 기준
 	 예> 1rem = 16px
+
 
        c. %
 
@@ -1000,6 +1002,10 @@ CSS 강좌정리
 	이때 부모(컨테이너)에 max-width:500px 지정하여 
 	지정된 500px 보다 더 커지지 않도록 제어가 가능하다.
 
+       예>
+
+           <div>  <== max-width:500px
+	     <img> <=== width:100%
      
      5) rem, em
       - 글꼴 크기지정시 사용
@@ -1020,3 +1026,41 @@ CSS 강좌정리
 	       <div> <-- 1.2 em ( 16 * 1.2 = 19.2px)
 	         <div> <-- 1.3 em ( 16 *  1.3 =  20.8)
 		   <div> <--- ?
+
+   * 권장하는 단위 선택하기
+
+     font-size: rem
+     padding/margin: rem (*), %
+     border: px
+     width/height: %,
+                   vw,vh
+     top/right/bottom/left: %
+
+ ##########################################
+15. 색상
+
+  1) 영단어 표기 ( 120 여개 됨 )
+
+    예> color:red|blue|aqua|...
+
+  2) 16진수 ( 0~15)
+    
+    - #RRGGBB ( 6비트), #RGB ( 3비트 )
+    - #FFFFFF: 흰색
+      #000000: 검정
+     
+    예> color: #FF6347;
+
+   3) 10진수 ( 0~255) + rgb(r,g,b)
+
+     - rgb(0~255,0~255,0~255)
+       rgb(0,0,0) <==검정
+       rgb(255,255,255) <==흰색
+
+   예> color: rgb(15, 184, 226);
+
+   4) 투명도 + 10진수 ==> rgba(0~255,0~255,0~255, 0~1)
+
+      - alpha값은 0이면 완전투명, 1이면 완전불투명
+
+     예> color: rgba(15, 184, 226, 0.3);
