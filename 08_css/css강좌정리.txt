@@ -1503,7 +1503,7 @@ CSS 강좌정리
 	          , auto (나머지 영역 차지), fr(fraction)
 
 
-     4. gap(간격)
+     d. gap(간격)
 
        가. 행의 간격 
 	    grid-row-gap: 10px
@@ -1515,5 +1515,36 @@ CSS 강좌정리
        
           문법: grid-gap:  row-gap   column-gap;
                grid-gap:   10px  20px
+
+
+     e. container내의 셀(cell)안에서 item 정렬
+
+         가. x축정렬
+	      justify-items:flex-end|center|..;
+
+	 나. y축정렬
+              align-items:flex-end|center|..;
+
+     f. container 자체 정렬
+
+          가. x축정렬
+             justify-content:flex-end|center|..;
+
+	 나. y축정렬
+	     align-content:flex-end|center|..;
+
+    
+      g. 자동으로 row 추가
+
+        grid-auto-flow: row (기본)
+	==> grid-template-rows: 값 값: 를 명시적으로 지정하지 않아도 
+	   자동으로 row 로 추가된다.
+        ==> 자동으로 추가되는 행의 height는 item이 가진 컨텐츠에 영향을 받아서 height가 정해진다.
+            이 height값을 고정하자.
+
+	    grid-auto-rows: 값;  <== 자동으로 추가되는 모든 행의 height가 동일해짐.
+        
+        
+
 
    4) item에서 사용 가능한 속성
