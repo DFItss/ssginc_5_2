@@ -1426,4 +1426,39 @@ CSS 강좌정리
 
 22. Grid
 
-   - 부트스트랩 프레임워크(*.css) 이용해서 화면구현해야 됨.
+   1) 개요
+     일반적으로 웹페이지는 행과 열로 구성된 grid 형식을 따름.
+     flexbox는 1차원인 행 또는 열만 따로따로 제어가 가능하다.
+     grid 2차원 제어 방식으로 행과 열을 같이 제어할 수 있다.
+
+   2) 2가지 구성요소
+    
+    - 반드시 부모(grid container)/자식(grid item)관계가 성립되어야 한다. ( 자손은 적용안됨 )
+    - 중첩가능
+
+     가. grid container
+	 - display:grid;
+         - container에서 사용가능한 속성들
+
+     나. grid item
+         - item에서 사용가능한 속성들
+
+
+     예>         
+	 .container{
+           display:grid;
+	 }
+
+         <div class="container">
+            <div>item</div>
+            <div>item</div>
+	    <div>item</div>
+	    <div>item
+	       <div>item2</div> <== grid item 아님. 자손은 제외
+	    </div>
+	    <div class="container2"> <== 중첩 가능
+                  <div>item</div>
+	    </div>
+	 </div>
+
+    - grid 는 행으로 추가됨
