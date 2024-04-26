@@ -1548,3 +1548,42 @@ CSS 강좌정리
 
 
    4) item에서 사용 가능한 속성
+
+     a. Container 속성에서 설정된 justify-items 와 align-items 재정의
+
+       .item-1{
+
+         justify-self: center|flex-start
+	 align-self:center|flex-start
+
+	}
+
+     b. 원하는 위치에 배치 1 - 위치의 번호
+
+        .item-3{
+
+	    grid-column-start:2
+            grid-column-end:4
+
+	    grid-row-start:1
+            grid-row-end:3
+
+	}
+
+       축약표현식
+
+          grid-column: start / end;
+	  grid-row: start / end;
+
+
+      b. 원하는 위치에 배치 2 - 위치 와 갯수
+
+          .item-3{
+
+	    grid-column-start:2
+            grid-column-end: span 3;
+
+	    grid-row-start:1
+            grid-row-end: span 2;
+
+	}
