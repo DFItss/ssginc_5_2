@@ -1492,5 +1492,28 @@ CSS 강좌정리
 	  grid-template-columns: 20px  2fr  20px  1fr;
           grid-template-columns: 20px  minmax(10px,100px)  20px  auto;
 
+     
+     c. 행 갯수 지정
+         - 주의할 점은 n 개 지정하지 않고
+	   행의 크기를 지정한다.
+
+         grid-template-rows: 값  값  값  값; 
+
+          값의 단위: px, %(기준:container) , rem(기준: 웹브라우저 기본글꼴값(16px)
+	          , auto (나머지 영역 차지), fr(fraction)
+
+
+     4. gap(간격)
+
+       가. 행의 간격 
+	    grid-row-gap: 10px
+
+       나. 열의 간격 
+           grid-column-gap: 20px
+
+      축약표현식(권장)
+       
+          문법: grid-gap:  row-gap   column-gap;
+               grid-gap:   10px  20px
 
    4) item에서 사용 가능한 속성
