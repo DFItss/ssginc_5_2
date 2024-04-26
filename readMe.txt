@@ -10,7 +10,7 @@ https://www.youtube.com/playlist?list=PLfrKiHMMe1cgRRLzX0NImqw-7ZOacocN8
 
 
 
+부트스트랩 유투브강좌
+https://www.youtube.com/playlist?list=PLRx0vPvlEmdAZ-wT8pwVJn5GBp5a5aVGy
 
 
-
-https://zoom.us/j/98727354176?pwd=NTJzQ3BPYnBNcWpMKzlPWS9EeHQydz09
