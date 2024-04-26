@@ -20,3 +20,5 @@ https://www.youtube.com/watch?v=5ETqQWvwXV4   ( 한시간에 끝내는 부트스
 https://www.youtube.com/playlist?list=PLRx0vPvlEmdAZ-wT8pwVJn5GBp5a5aVGy
 
 
+github의 pull request 
+https://www.youtube.com/playlist?list=PLuHgQVnccGMBXv1OKe3Hn3Jq6F735-uWm
