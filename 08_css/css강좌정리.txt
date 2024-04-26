@@ -1587,3 +1587,24 @@ CSS 강좌정리
             grid-row-end: span 2;
 
 	}
+
+      b. 원하는 위치에 배치 3 - 셀 이름
+
+
+         가. 셀 이름 지정 ( Container 에서 지정 )
+
+	   .container{
+
+               grid-template-areas: "header header header1 header1"
+                                    ".  .  main main"   <== 셀명을 생략가능. 하지만 . 지정해서 갯수는  반드시 일치해야 됨.
+				    "footer1 footer2 footer3  footer4" 
+	   }
+
+         나. 요소 배치 ( item 속성 )
+	  
+	   .item-1{
+              grid-area:main;
+	   }
+	   .item-2{
+              grid-area:header;
+	   }
