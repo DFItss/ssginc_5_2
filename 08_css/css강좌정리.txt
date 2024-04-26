@@ -1461,4 +1461,36 @@ CSS 강좌정리
 	    </div>
 	 </div>
 
-    - grid 는 행으로 추가됨
+    - grid 는 행으로 추가됨.
+      따라서 여러개의 행이 만들어지고 하나의 열로 구성됨.
+
+
+   3) Container에서 사용 가능한 속성
+
+      a. item 배치 
+         grid-auto-flow:row|column
+         
+	 - row 기본. ( 행으로 추가됨. 다중행의 1열로 구성 )
+	 - column  ( 열로 추가됨.   1행의 다중열로 구성 )
+          
+      b. 열 갯수 지정
+         - 주의할 점은 n 개 지정하지 않고
+	   열의 크기를 지정한다.
+
+         grid-template-columns: 값  값  값  값;  
+
+	 값의 단위: px, %(기준:container) , rem(기준: 웹브라우저 기본글꼴값(16px)
+	          , auto (나머지 영역 차지), fr(fraction)
+
+       예> grid-template-columns: 20px  20px  20px  20px; 
+          grid-template-columns: repeat(4, 20px); 
+          grid-template-columns: 20%  20%  20%  20%; /* container 기준 */
+	  grid-template-columns: repeat(4, 20%); 
+          grid-template-columns: 20%  20px  20px  20%;
+          grid-template-columns: 20px  20px  20px  auto;
+	  grid-template-columns: 20px  20px  20px  1fr;
+	  grid-template-columns: 20px  2fr  20px  1fr;
+          grid-template-columns: 20px  minmax(10px,100px)  20px  auto;
+
+
+   4) item에서 사용 가능한 속성
