@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>flex-grow</title>
+<title>flex-basis</title>
 <style type="text/css">
 * {
     box-sizing: border-box;
@@ -27,7 +27,7 @@ body {
 
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nowrap;
   }
 
 .item-1 {
@@ -74,9 +74,11 @@ body {
     padding: 10px;
     border: 5px solid black;
     margin: 10px;
+
+
     width: 350px;
 
-    flex-grow: 1;
+    flex-basis: auto;
 }
 
 .item-6 {
@@ -85,9 +87,10 @@ body {
     padding: 10px;
     border: 5px solid black;
     margin: 10px;
+
     width: 350px;
 
-    flex-grow: 4;
+    flex-basis:250px;
 }
 </style>
 </head>
