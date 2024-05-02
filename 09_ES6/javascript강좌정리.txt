@@ -1,0 +1,71 @@
+
+
+* 웹 어플리케이션 개발 ( 웹사이트 )
+
+ 1. web application
+   
+   - 화면 필요 ( html, JSP/Servlet)
+   
+
+     브라우저 ------------------------> 서버 ( html, JSP/Servlet, Spring Framework, Spring Boot )
+            <--------------------------
+	      응답: html
+
+
+2. REST API
+             -----------------------> 서버 ( Spring Framework, Spring Boot )
+     장치      <----------------------
+	        JSON ( JavaScript Object Notation)
+		{key:value, key:value}
+    
+
+3. full stack 어플리케이션 ( 화면 + REST API)
+
+      React.js(JS)  ------------------------> 서버 ( Spring Framework, Spring Boot )
+                  <--------------------------
+	          응답: JSON
+
+
+4. MSA ( Micro Service Application)
+
+###########################################################################
+
+1. (Vanilla) Javascript(JS) 개요
+
+  - Java 언어와 무관
+  - 웹브라우저에서 실행됨 ( JS 엔진 )
+    크롬의 JS 엔진: v8
+    html 랜더링 기능: 랜더링 엔진
+
+  - V8엔진을 크롬 브라우저뿐만 아니라 일반 서버에서도 실행될 수 있도록 만듬.
+    ==> node.js
+
+
+     클라이언트                           서버
+     (크롬브라우저:V8)                 (node.js:V8)
+
+  - JS 라이브러리
+    ==> jQuery
+
+  - JS 프레임워크 (프런트 앤드 기술 )
+    => React.js (*, 페이스북)
+    => Vue.js   ( 중국계 미국인 )
+    => Angular  ( 구글 )
+
+  - React 종류 3가지
+
+    가. React.js
+       - CSR ( Client Side Rendering )
+
+    나. Next.js
+       - SSR ( Server Side Rendering )
+
+    다. React Native
+      - 모바일 용
+
+  - JS 표준화 ==> ES6 ( ECMAScript 6: 2015 년 )
+    일반적인 JS는 ES5 의미한다.
+
+  - TypeScript (******)
+     JS + 타입지정 ==> 개발향상 기대
+     
