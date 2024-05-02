@@ -387,7 +387,8 @@ console.log(n === n2); //false,  identical 연산자 ( 값과 타입까지 비교 )
       :제어문 - 조건문( 단일if문, if~else문, 다중if문, switch 문(내부적으로 ===(identical)을 사용함 )
 
             - 반복문 ( for문, while문, do~while문, foreach문)
-
+              ==> break문
+	          continue문
 
     - 비실행문: 주석문 ( //, /*  ~  */ )
 
