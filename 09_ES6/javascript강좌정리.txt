@@ -120,7 +120,7 @@
      - JSON(객체): {key:value, key:value}
      - 함수(function): 기능처리 (*************)
                     예> function fun(){}
-
+       ==> 함수가 데이터란 의미는 함수를 변수에 저장할 수 있음을 의미한다.
      - 클래스(class):   class Cat{
                          생성자
 			 메서드(함수문법)
