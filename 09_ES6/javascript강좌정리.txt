@@ -424,3 +424,31 @@ console.log(n === n2); //false,  identical 연산자 ( 값과 타입까지 비교 )
    - Document 객체
 
 
+2. 데이터 관련 객체
+
+ 1) 문자데이터 관련 객체
+
+   - String 객체 관리
+   - 생성방법 3가지
+
+     가. 리터럴값만 이용 (권장)
+        let s = "hello";
+
+     나. new 생성자 이용       
+        let s2 = new String("hello");
+
+     다.  생성자 이용    
+       let s3 = String("hello");
+     
+    - 문자열 표현방법 3가지
+      가. 'hello' 이용
+      나. "hello" 이용
+      다. `hello` 이용( 백틱, template literal ) (*****************************)
+
+        * 백틱장점 2가지
+	1) 변수삽입 가능: ${변수}이용
+	2) 들여쓰기, 엔터 같은 동작이 그대로 적용되어 출력포맷의 가독성이 높아진다.
+
+
+    - 메서드 조회
+     http://developer.mozilla.com
