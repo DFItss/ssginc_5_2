@@ -114,8 +114,19 @@
                   자바:  Integer.parseInt("123");  ==> 123
 		        Integer.parseInt("홍길동"); ==> 에러
 
+  나. 참조 데이터형 ( 객체 데이터 의미 )
 
-  나. 참조 데이터형
+     - 배열(객체): [값, 값2, ..]
+     - JSON(객체): {key:value, key:value}
+     - 함수(function): 기능처리 (*************)
+                    예> function fun(){}
+
+     - 클래스(class):   class Cat{
+                         생성자
+			 메서드(함수문법)
+			 function fun(){}
+                      }
+      
 
 
 
