@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>hello</title>
+    <script>
+
+     // Array 메서드
+
+     var n = [10,20,30];
+    
+     //1. 값 얻기
+
+     console.log("1. 개별적인 인덱스 이용: ", n[0],n[1]);
+
+     console.log("2. 일반for 문: ");
+     for(var i=0; i < n.length; i++ ){
+       console.log(n[i]);
+      }
+      
+      console.log("3. foreac문 역할: ");
+      /*
+      자바
+      for(int x: arr){}
+      
+      JS
+      for(var x of arr){} ==> 값 반환
+      for(var x in arr){} ==> index값 반환
+      */
+     for(var x of n){
+      console.log(x);
+     }
+
+     for(var x in n){
+      console.log(x, n[x]);
+     }
+      
+
+     //2. 값추가/값삽입/값삭제/값변경
+     var n2 = [10,20,30];
+
+     console.log("4. 배열 마지막에 값 추가")
+     //n2[3]=40;
+     n2.push(40);
+     n2.push(50,60,70);
+     console.log(n2);
+     
+     console.log("5. 배열 마지막에 값 삭제")
+     n2.pop();
+     console.log(n2);
+     console.log(n2.pop());  // 삭제된 값이 반환됨.
+
+     console.log("6. 배열 중간에 값 삽입 및 삭제")
+     /*
+      array.splice(start[, deleteCount[, item1[, item2[, ...]]]])
+
+      array.splice(0,3) ==> 0부터시작해서 3개 삭제
+      array.splice(0,3,10,20) ==> 0부터시작해서 3개 삭제하고 10과 20 삽입
+      array.splice(0,0,10,20) =>  0부터 10과 20 삽입
+
+     */
+
+
+
+
+    </script>
+  </head>
+  <body>
+   
+
+  </body>
+</html>
