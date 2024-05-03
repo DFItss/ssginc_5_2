@@ -411,7 +411,8 @@ console.log(n === n2); //false,  identical 연산자 ( 값과 타입까지 비교 )
       -문자관련 ==> String 객체가 관리
       -수치    ==> Number 객체가 관리
       -날짜    ==> Date 객체가 관리
-      -배열    ==> Array 객체가 관리
+      -배열    ==> Array 객체가 관리 (***************)
+                 Set/Map 같은 컬렉션 제공됨(ES6)
       -JSON   ==> object 객체가 관리
   2) BOM ( Browser Object Model)
     - 웹 브라우저 관련 객체 
@@ -484,3 +485,21 @@ console.log(n === n2); //false,  identical 연산자 ( 값과 타입까지 비교 )
       let d = new Date();
 
       let d2 = Date();
+
+
+4) 배열 데이터 관련 객체
+
+  - Array 객체가 관리
+  - 특징: 자바의 List 처럼 동작됨.
+
+  - 생성방법 
+     
+    var n = [10,20,30];
+    var n = [];
+
+    var n = new Array();
+    var n = new Array(10,20,30);
+
+    var n = Array();
+    var n = Array(10,20,30);
+
