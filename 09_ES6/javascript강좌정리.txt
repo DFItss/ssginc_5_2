@@ -424,7 +424,7 @@ console.log(n === n2); //false,  identical 연산자 ( 값과 타입까지 비교 )
       Navigator 객체
   3) DOM ( Document Object Model )
    - html 문서 관련 객체
-   - Document 객체
+   - Document 객체 ( 자동으로 생성됨. document 변수로 참조 )
 
 
 2. 데이터 관련 객체
@@ -564,8 +564,32 @@ console.log(n === n2); //false,  identical 연산자 ( 값과 타입까지 비교 )
 
 
 
+5. Window 객체
+
+  - 전역객체
+  - window 변수로 참조 가능.
+    하지만 일반적으로 생략해서 사용.
+  
+  - screen, location, history. navigator, document 은
+    Window 객체의 속성이다.
+    원래는 window.screen
+         window.location
+	 window.history
+	 window.navigator
+	 window.document  사용하는것이 원칙이지만 일반적으로 window 는 생략하고 사용된다.
+
+
+  - window.opener : 자식창에서 부모창 참조할 때 사용.
+  - 부모에서 새로운 창(자식창)을 만드는 방법
+
+     var childWin = open("child.html");  // window.open("child.html"); 동일
 	 
+    현재 창 닫기
+      window.close();
 
+    부모창 닫기
+      opener.close();
 
-
-
+    자식창 닫기
+      childWin.close();
+  
