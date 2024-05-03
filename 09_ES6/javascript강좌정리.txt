@@ -540,3 +540,32 @@ console.log(n === n2); //false,  identical 연산자 ( 값과 타입까지 비교 )
      // 4. 문자열 전개
      var x = [...'hello'];
      console.log(x);  // ['h', 'e', 'l', 'l', 'o']
+
+
+4. BOM ( Browser Object Model)
+    - 웹 브라우저 관련 객체 
+    - 종류
+      Window 객체 : 전역객체( window 변수를 생략하고 사용이 가능하다.(***) )
+                   웹브라우저 창 자체를 의미.
+      Screen 객체 : 창의 크기 정보 ( width/height )
+      History 객체 : 웹 페이지의 뒤로/앞으로 기능
+      Location 객체 : 웹 브라우저의 URL 정보
+      Navigator 객체 : 웹 브라우저 자체 정보
+    
+    - 특징: 웹 브라우저를 open하면 자동으로 객체생성이 된다.
+           개발자는 명시적 생성없이 참조해서 사용할 수 있음.
+	   어떤 변수명으로 되어 있을까?
+
+	    Window 객체 참조:  window 변수를 사용한다.
+	    Screen 객체 참조:  screen 변수를 사용한다.
+	    History 객체 참조:  history 변수를 사용한다.
+	    Location 객체 참조:  location 변수를 사용한다.
+	    Navigator 객체 참조:  navigator 변수를 사용한다.
+
+
+
+	 
+
+
+
+
