@@ -618,7 +618,7 @@ console.log(n === n2); //false,  identical 연산자 ( 값과 타입까지 비교 )
 5. JSON 객체 (*******************)
 
   1)문법
-    {key:value, key1:value1,...}
+    {"key":value, key1:value1,...}
 
   2) 특징
     - value는 함수도 가능하다.
@@ -634,3 +634,37 @@ console.log(n === n2); //false,  identical 연산자 ( 값과 타입까지 비교 )
       예> 
          setUsername:function(n){this.username=n}
 	 ==> setUsername(n){this.username=n}
+
+    - 메서드 정의 앞에 set / get 키워드 지정 가능.
+      기존 메서드처럼 사용하면 안되고(  person.setUsername("이순신"), person.getUsername() )
+      속성처럼 사용해야 된다. ( person.setUsername="이순신", person.getUsername )
+      
+       예>  
+           set setUsername(n){this.username=n}
+           get getUsername(){return this.username;}
+
+
+    - key값도 변수로 사용가능. [변수명]
+      
+       예> var xxx = "username";
+
+          {[xxx]:"홍길동" };  ==> {"username":"홍길동"}
+
+      + 이용해서 연결해서 사용가능
+         {[xxx+"01"]:"홍길동" }; ==> {"username01":"홍길동"}
+       
+    - 중첩가능
+      
+    - "{key:value}" --------> {key:value}
+      "[10,20]"  --------> [10,20]
+       JSON.parse("{key:value}");
+       
+       {key:value} ----> "{key:value}"
+       [10,20] ----> "[10,20]"
+       JSON.stringify({key:value})
+
+       "10" --------> 10
+        Number.parseInt("10");
+
+	10 ----------->"10"
+	String(10)
