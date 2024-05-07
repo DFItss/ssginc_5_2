@@ -31,6 +31,24 @@
      xxx(zzz); 
    
 
+    //3. 함수호출후 리턴값으로 함수사용 ==> 중첩함수
+
+    //  function kkk(){
+    //     console.log("kkk");
+    //  }
+
+    //  var kkk = function(){ console.log("kkk");};
+     
+
+     function kkk2(){
+        // return kkk;
+        return function(){ console.log("kkk");};
+     }
+
+     var result = kkk2();
+     result();
+
+
 
     </script>
   </head>
