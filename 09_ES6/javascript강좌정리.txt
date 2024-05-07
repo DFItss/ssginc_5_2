@@ -2,7 +2,7 @@
 
 * 웹 어플리케이션 개발 ( 웹사이트 )
 
- 1. web application
+ 1. web application ( studentOAP )
    
    - 화면 필요 ( html, JSP/Servlet)
    
@@ -18,6 +18,12 @@
 	        XML, JSON ( JavaScript Object Notation)
 		{key:value, key:value}
     
+    장치?
+    - 도구 이용
+    - postman 툴 ( GUI )
+      Talend API Tester 툴 ( GUI ) - *
+      curl 툴 ( CMD )
+      Swagger ( 자바언어 ) - *
 
 3. full stack 어플리케이션 ( 화면 + REST API)
 
@@ -411,17 +417,20 @@ console.log(n === n2); //false,  identical 연산자 ( 값과 타입까지 비교 )
       -문자관련 ==> String 객체가 관리
       -수치    ==> Number 객체가 관리
       -날짜    ==> Date 객체가 관리
-      -배열    ==> Array 객체가 관리 (***************)
-                 Set/Map 같은 컬렉션 제공됨(ES6)
+      -배열    ==> Array 객체가 관리 (자바의 List 역할, ***************)
+                  Set/Map 같은 컬렉션 제공됨(ES6)
       -JSON   ==> object 객체가 관리
   2) BOM ( Browser Object Model)
     - 웹 브라우저 관련 객체 
     - 종류
-      Window 객체
-      Screen 객체
-      Histroy 객체
-      Location 객체
-      Navigator 객체
+      Window 객체 ( window 변수로 참조 )
+      Screen 객체 ( screen 변수로 참조 )
+      Histroy 객체 ( histroy 변수로 참조 )
+      Location 객체 ( location 변수로 참조 )
+      Navigator 객체 ( navigator 변수로 참조 )
+    - 웹브라우저를 open하면 자동으로 생성됨.
+
+
   3) DOM ( Document Object Model )
    - html 문서 관련 객체
    - Document 객체 ( 자동으로 생성됨. document 변수로 참조 )
@@ -578,11 +587,11 @@ console.log(n === n2); //false,  identical 연산자 ( 값과 타입까지 비교 )
 	 window.navigator
 	 window.document  사용하는것이 원칙이지만 일반적으로 window 는 생략하고 사용된다.
 
-
+  1) 새로운 창 열고 닫기
   - window.opener : 자식창에서 부모창 참조할 때 사용.
   - 부모에서 새로운 창(자식창)을 만드는 방법
 
-     var childWin = open("child.html");  // window.open("child.html"); 동일
+     var childWin = open("child.html");  // window.open("child.html", 옵션); 동일
 	 
     현재 창 닫기
       window.close();
@@ -593,3 +602,17 @@ console.log(n === n2); //false,  identical 연산자 ( 값과 타입까지 비교 )
     자식창 닫기
       childWin.close();
   
+  2) setTimeout(function(){}, 1/1000);
+    - 한번 만 실행됨.
+
+  3) setInterval(function(){}, 1/1000);
+    - 매번 실행
+    - 해제방법: clearInterval(fun);
+
+  
+   4) alert("경고창")
+      confirm("진짜 삭제할거임?")
+      propmt("이름을 입력하세요");
+
+
+5. JSON 객체 (*******************)
