@@ -616,3 +616,21 @@ console.log(n === n2); //false,  identical 연산자 ( 값과 타입까지 비교 )
 
 
 5. JSON 객체 (*******************)
+
+  1)문법
+    {key:value, key1:value1,...}
+
+  2) 특징
+    - value는 함수도 가능하다.
+      만약 함수인 경우에 일반 key 접근시 this 사용해야 된다.
+    - 속성 접근은 .(dot) 이용하거나 ["key값"] 형식의 연관배열 사용 가능 (************)
+      연관배열의 특징은 "key값" 을 변수로 사용할 수 있다. (*****)
+
+    - value값은 변수로 사용가능.
+     만약 key와 value가 동일하면 key만 지정가능.
+      예> { username:username } ==> {username}
+
+    - value가 함수인 경우에는 :function 생략가능해서 자바의 메서드처럼 사용가능.
+      예> 
+         setUsername:function(n){this.username=n}
+	 ==> setUsername(n){this.username=n}
