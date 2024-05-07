@@ -721,3 +721,59 @@ console.log(n === n2); //false,  identical 연산자 ( 값과 타입까지 비교 )
     ==> function fun(n,...n2){}
         function fun(n,n2,...n3){} 
         fun(10,20,30);
+
+  - 함수호출시 spread 연산자 이용한 방식으로 인자값을 전달 할 수 있다.
+   
+    예>
+        function fun(n,n2){}
+
+
+        var x = [10,20];
+	fun(x[0],x[1]); //기본
+	fun(...x);      //spread
+
+  - 기본형 데이터와 참조형 데이터 인자값 사용
+
+  - 기능에 따라 4가지 형태
+
+    가. 파라미터없고 리턴값없는 형태
+    나. 파라미터있고 리턴값없는 형태
+    다. 파라미터없고 리턴값있는 형태
+    라. 파라미터있고 리턴값있는 형태
+
+  - JS함수는 일급객체(first-class) 이다.
+    일급객체의 핵심개념은 함수를 데이터로 처리하는 것이다.
+    함수이용해서 할수 있는 작업은 다음과 같다.
+    가. 함수를 변수에 저장할 수 있다.
+    나. 함수호출시 인자값으로 함수를 사용할 수 있다.
+     예> arr.forEach(인자값);
+         personList.forEach(function(data,idx){});
+ 
+    다. 함수호출후 리턴값으로 함수를 사용할 수 있다.
+
+     예>
+         var x = function(){};
+      
+         function fun(){
+
+	   // return 값;
+	   return x;
+	 }
+
+
+  - 콜백함수(callback)
+   => 개념: 사용자가 명시적으로 호출하지 않고
+          시스템이 특정상황에 호출하는 함수를 의미한다.
+   => 주로 이벤트 처리시 사용된다.
+
+    자바의 swing 이벤트
+
+     Button btnOk= new Button("OK");
+
+      // 사용자호출;addActionListener()
+         시스템호출:actionPerformed()
+     btnOk.addActionListener(new ActionListener(){
+	   public void actionPerformed(ActionEvent e){
+
+	   }
+     });
