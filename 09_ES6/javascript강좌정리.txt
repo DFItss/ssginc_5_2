@@ -930,9 +930,25 @@ console.log(n === n2); //false,  identical 연산자 ( 값과 타입까지 비교 )
 	   => 시작태그에서 on이벤트타입으로 된 속성이용
 	    예> <button onclick="함수()"></button>
            => 특징은 html과 JS 분리가 안된 방식으로 권장 안함.
-
 	 - 고전 방식
+            => 특징은 html과 JS 분리해서 이벤트처리가 됨
+	    => JS에서 이벤트소스를 얻고 on이벤트타입를 지정해서 처리.   
+   	     문법:
+	        JS:  이벤트소스.onclick=function(){};
 
+                html:   <button id="x">Ok</button>
+	                <button id="y">OK2</button>
+           => 이벤트소스 얻는 방법 (button)			
+		document.메서드() 이용
+             예>  요소(태그) 하나 반환하는 경우
+		  - var result = document.getElementById("x");
+		                             ..
+                  - var result = document.querySelector("css의 선택자문법");
+                  css의 선택자문법: #id, .class, 태그명, [속성명], 부모 > 자식,
+
+	         요소 여러개 반환하는 경우 ( 배열로 반환 )
+                  - var result = document.querySelectorAll("css의 선택자문법");
+                  css의 선택자문법: #id, .class, 태그명, [속성명], 부모 > 자식,
 
     나.  DOM Level 2
 
