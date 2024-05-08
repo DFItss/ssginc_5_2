@@ -783,3 +783,92 @@ console.log(n === n2); //false,  identical 연산자 ( 값과 타입까지 비교 )
     나. 파라미터있고 리턴값없는 형태
     다. 파라미터없고 리턴값있는 형태
     라. 파라미터있고 리턴값있는 형태
+
+    // arrow 함수
+
+      // 가. 파라미터없고 리턴값없는 형태 
+      var fun = function(){console.log("가. 일반 fun");};
+      fun();
+
+      var fun = ()=>{console.log("가. arrow fun");};
+      var fun = ()=>console.log("가. arrow fun");
+      fun();
+
+      //나. 파라미터있고 리턴값없는 형태
+      var fun = function(n){console.log("나. 일반 fun", n );};
+      fun(100);
+      
+      var fun = (n)=>{console.log("나. arrow fun", n );};
+      var fun = n=>console.log("나. arrow fun", n );
+      fun(100);
+
+      //  다. 파라미터없고 리턴값있는 형태
+      var fun = function(){return 100};
+      var result = fun();
+      console.log("다. 일반 fun", result);
+
+      var fun = ()=>{return 100};
+      var fun = ()=> 100;
+      var result = fun();
+      console.log("다. arrow fun", result);
+
+
+      // 라. 파라미터있고 리턴값있는 형태
+      var fun = function(n, n2){return n+n2};
+      var result = fun(10, 20);
+      console.log("라. 일반 fun", result);
+
+      //arrow 변경하시오
+      var fun = (n, n2)=>{return n+n2};
+      var fun = (n, n2)=>n+n2;
+      var result = fun(10, 20);
+      console.log("라. arrow fun", result);
+
+
+
+8. generator 함수
+
+  1) 문법
+   
+    function* fun(){
+	console.log("1");
+	yield
+        console.log("2");
+        console.log("3");
+    }
+
+  2)특징
+   - 함수를 호출하면 Generator 객체로 반환됨.
+     호출시 함수코드 블럭이 실행이 안됨.
+   -  함수코드 블럭을 실행하기 위해서는 next() 호출해야 된다.
+   - 함수코드 블럭의 여러 실행문을 분할해서 실행할 수 있다. 
+     yield 키워드 이용
+   
+   - 함수실행 중단
+
+    가. 일반함수
+
+      function fun(){
+        console.log("1");
+        console.log("2");
+	if(true) return;
+        console.log("3");
+      }
+     
+      fun();
+
+     나. generator함수
+
+      function* fun(){
+        console.log("1");
+	yield
+        console.log("2");
+	yield
+        console.log("3");
+      }
+     
+      var gen = fun();
+      gen.next(); // 1
+      //중단
+      gen.return();
+       
