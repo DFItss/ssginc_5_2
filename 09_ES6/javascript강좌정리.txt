@@ -677,12 +677,10 @@ console.log(n === n2); //false,  identical 연산자 ( 값과 타입까지 비교 )
 
  2) 종류1
   
-   - 일반함수: 일반적으로 사용되는 함수 의미.
-            
+   - 일반함수: 일반적으로 사용되는 함수 의미.           
    - generator 함수 : Generator 객체를 반환하는 함수.
-   - 비동기 함수:      Promise를 객체를 반환하는 함수
-
-
+   - 비동기 함수:      Promise를 객체를 반환하는 함수 ( 동기 vs 비동기 )
+  
  3) 함수 작성 방법 2가지
 
     가. 함수 선언식 ( 이름있는 함수 )
@@ -691,12 +689,18 @@ console.log(n === n2); //false,  identical 연산자 ( 값과 타입까지 비교 )
            [return 값;]
 	}
 
+      ==> js 실행할 때 함수가 생성됨.
+          따라서 선언보다 먼저 호출이 가능하다.
+
     나. 함수 표현식 ( 이름없는 함수, 익명함수 )
        var 변수 =  function ([파라미터,..]){
 		   문장;
 		   [return 값;]
 		};
         변수가 함수명으로 사용됨.
+
+     ==> var 변수=함수  코드를 만나면 함수가 생성됨.
+        반드시 선언후에 호출할 수 있다.
 
  4) 함수특징
    - 반드시 호출해야 된다. 
@@ -741,15 +745,15 @@ console.log(n === n2); //false,  identical 연산자 ( 값과 타입까지 비교 )
     다. 파라미터없고 리턴값있는 형태
     라. 파라미터있고 리턴값있는 형태
 
-  - JS함수는 일급객체(first-class) 이다.
+  - JS함수는 일급객체(first-class) 이다. (************)
     일급객체의 핵심개념은 함수를 데이터로 처리하는 것이다.
     함수이용해서 할수 있는 작업은 다음과 같다.
     가. 함수를 변수에 저장할 수 있다.
-    나. 함수호출시 인자값으로 함수를 사용할 수 있다.
+    나. 함수호출시 인자값으로 함수를 사용할 수 있다. ===> 콜백함수를 구현 가능
      예> arr.forEach(인자값);
          personList.forEach(function(data,idx){});
  
-    다. 함수호출후 리턴값으로 함수를 사용할 수 있다.
+    다. 함수호출후 리턴값으로 함수를 사용할 수 있다. ==> 중첩함수를 구현 가능
 
      예>
          var x = function(){};
@@ -757,23 +761,25 @@ console.log(n === n2); //false,  identical 연산자 ( 값과 타입까지 비교 )
          function fun(){
 
 	   // return 값;
-	   return x;
+	   //return x;
+	   return  function(){};
 	 }
 
 
-  - 콜백함수(callback)
+  - 콜백함수(callback *********************)
    => 개념: 사용자가 명시적으로 호출하지 않고
-          시스템이 특정상황에 호출하는 함수를 의미한다.
+           시스템이 특정상황에 호출하는 함수를 의미한다.
    => 주로 이벤트 처리시 사용된다.
+   => 구현방법
 
-    자바의 swing 이벤트
+       명시적으로 호출할 때 시스템이 호출할 수 있는 
+       함수명을 전달하는 방법으로 구현이 가능하다.
 
-     Button btnOk= new Button("OK");
-
-      // 사용자호출;addActionListener()
-         시스템호출:actionPerformed()
-     btnOk.addActionListener(new ActionListener(){
-	   public void actionPerformed(ActionEvent e){
-
-	   }
-     });
+7. arrow 함수 ( 자바의 lambda와 비슷, -> thin arrow)
+  - JS에서는 => (fat arrow )이용
+  - 함수선언식 및 함수표현식 모두 arrow 함수로 변경 가능.
+  - 종류는 기능에 따른 4가지
+    가. 파라미터없고 리턴값없는 형태
+    나. 파라미터있고 리턴값없는 형태
+    다. 파라미터없고 리턴값있는 형태
+    라. 파라미터있고 리턴값있는 형태
