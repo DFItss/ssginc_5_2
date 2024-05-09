@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>hello</title>
+
+    <script>
+      function go(){
+        if(false){
+
+        }else{
+          event.preventDefault();
+          alert("id와 pw 입력하세요");
+        }
+      }
+    </script>
+
+  </head>
+  <body>
+   
+     <h1>DOM Level0-인라인방식</h1>
+     <form action="target.html" onsubmit="go()">
+        userid: <input type="text" name="userid"><br>
+        passwd: <input type="text" name="passwd"><br>
+        <input type="submit" value="로그인">
+     </form>
+
+
+     <h1>DOM Level2</h1>
+     <form action="target.html">
+      userid: <input type="text" name="userid"><br>
+      passwd: <input type="text" name="passwd"><br>
+      <input type="submit" value="로그인">
+   </form>
+
+
+  </body>
+</html>
