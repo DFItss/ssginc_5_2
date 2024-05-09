@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>hello</title>
+    <script>
+
+       function allCheck(){
+
+            var check= document.querySelector("#allCheck").checked;
+            // console.log(check);
+
+            var chk_list = document.querySelectorAll(".chk");
+            chk_list.forEach(function(v,idx){
+                   v.checked=check;
+            });
+       }
+    
+    </script>
+  </head>
+  <body>
+  
+
+    <table border="1">
+      <tr>
+        <th>
+          선택
+          <input type="checkbox" onclick="allCheck()" id="allCheck">
+        </th>
+        <th>상품명</th>
+        <th>가격</th>
+      </tr>
+      <tr>
+         <td><input type="checkbox" class="chk"></td>
+        <td>사과</td>
+        <td>2500</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="chk"></td>
+        <td>배</td>
+        <td>3500</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="chk"></td>
+        <td>바나나</td>
+        <td>1500</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="chk"></td>
+        <td>수박</td>
+        <td>5500</td>
+      </tr>
+    </table>
+  </body>
+</html>
