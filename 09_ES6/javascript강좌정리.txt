@@ -832,7 +832,7 @@ console.log(n === n2); //false,  identical 연산자 ( 값과 타입까지 비교 )
    
     function* fun(){
 	console.log("1");
-	yield
+	yield 값
         console.log("2");
         console.log("3");
     }
@@ -908,6 +908,7 @@ console.log(n === n2); //false,  identical 연산자 ( 값과 타입까지 비교 )
       마우스 이용: click, change, mouseover, mouseout, dbclick,....
       키보드 이용: keyup, keydown, keypress
       포커스 관련: focus, blur(포커스해제)
+      submit버튼: submit
 
       시스템 관련: load
 
@@ -928,14 +929,16 @@ console.log(n === n2); //false,  identical 연산자 ( 값과 타입까지 비교 )
          - 인라인 방식
            => html 시작 태그에서 이벤트처리.
 	   => 시작태그에서 on이벤트타입으로 된 속성이용
-	    예> <button onclick="함수()"></button>
+	    예> <button onclick="함수()"></button> ==> HTMLButtonElement 객체관리(속성,메서드)
+	       <a href="daum"></a>                ==> HTMLAnchorElement 객체관리
            => 특징은 html과 JS 분리가 안된 방식으로 권장 안함.
 	 - 고전 방식
             => 특징은 html과 JS 분리해서 이벤트처리가 됨
 	    => JS에서 이벤트소스를 얻고 on이벤트타입를 지정해서 처리.   
    	     문법:
 	        JS:  이벤트소스.onclick=function(){};
-
+                     이벤트소스.href="naver";
+		     
                 html:   <button id="x">Ok</button>
 	                <button id="y">OK2</button>
            => 이벤트소스 얻는 방법 (button)			
@@ -958,8 +961,10 @@ console.log(n === n2); //false,  identical 연산자 ( 값과 타입까지 비교 )
 	        JS:  이벤트소스.onclick=function(){};           // DOM Level 0 
 	        JS:  이벤트소스.addEventListener("이벤트타입",이벤트핸들러, useCapture);  // DOM Level 2
 
-                  ==>document.querySelector("#x").addEventListener("click",function(){});   
-
+           ==>document.querySelector("#x").addEventListener("click",function(){}); //콜백함수   
+	   
+             var fun = function(){};
+	     document.querySelector("#x").addEventListener("click", fun);  //콜백함수  
 
                 html:   <button id="x">Ok</button>
 
@@ -994,3 +999,10 @@ console.log(n === n2); //false,  identical 연산자 ( 값과 타입까지 비교 )
          function fun(){	
 	    console.log(event);
 	 }
+
+     - 속성과 메서드가 제공됨.
+       속성: event.target
+       메서드:
+             이벤트전파방지: event.stopPropagation();
+	     기본동작방지:  event.preventDefault();
+	              예> <form>태그의 submit 기능
