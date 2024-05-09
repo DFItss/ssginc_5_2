@@ -9,19 +9,18 @@
 
          var input = document.querySelector("#username");
          console.dir(input); // HTMLInputElement
-         
          console.log(input.value);
+
+         var div = document.querySelector("#result");
+         div.innerHTML = input.value;
       }
-      function set_message(){
-    
-      }
+
     </script>
   </head>
   <body>
     
     입력값:<input type="text" name="username" id="username" value="이순신">
     <button onclick="get_message()">값 얻기</button>
-    <button onclick="set_message()">값 수정</button>
     <div id="result"></div>
   </body>
 </html>
