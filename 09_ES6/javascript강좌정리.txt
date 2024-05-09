@@ -1006,3 +1006,47 @@ console.log(n === n2); //false,  identical 연산자 ( 값과 타입까지 비교 )
              이벤트전파방지: event.stopPropagation();
 	     기본동작방지:  event.preventDefault();
 	              예> <form>태그의 submit 기능
+
+
+###########################################################################
+###########################################################################
+8장. DOM
+############################################################################
+
+1. 개요
+ - Document Object Model
+  => Document(html문서)
+     Object(JS객체)
+  => 사용자가 만든 html(태그및속성)문서를
+     웹브라우저가 랜더링하기 위해서 
+     html내의 요소(태그및속성)에 해당되는 객체(HTMLButtonElement,HTMLAnchorElement)를
+     생성해서 메모리에 올리고(DOM Tree)
+     메모리에 올라간 객체를 참조해서 관리하는 방법론.
+    
+     우리는 메모리에 올라간 JS객체(DOM)의 속성과 메서드를 이용해서
+     동적인 화면처리가 가능하다.
+
+ - DOM 접근방법 ( html 문서를 참조하는 Document 객체를 이용, 실제 참조는 docuement 변수를 이용 )
+
+    # 하나의 요소(객체)를 반환
+    document.getElementById("아이디값");
+    document.querySelector("css 선택자");
+
+    # 여러개의 요소(객체)를 반환 ( 배열 )
+    document.querySelectorAll("css 선택자");
+
+2. DOM의 값 종류
+
+  1) 시작태그와 종료태그의 content(body)
+   
+    예>
+        <p>홍길동</p>
+	<p><span>홍길동</span></p>
+	<div>홍길동</div>
+	<div><span>홍길동</span></div>
+
+    - content 접근은 innerText / innerHTML 사용한다.
+
+  2) <input> 태그같은 폼의 태그의 값 
+
+     - value 속성 사용한다.
