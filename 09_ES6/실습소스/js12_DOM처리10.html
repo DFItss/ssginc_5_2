@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>hello</title>
+    <script>
+
+      function go(){
+
+          var f = document.querySelector("#myForm");
+          console.dir(f);  // HTMLFormElement
+          f.action="http://www.google.com";
+          f.submit();
+      }
+    
+    </script>
+  </head>
+  <body>
+  
+     <form action="target.html" id="myForm">
+       아이디: <input type="text" name="username"><br>
+       비번: <input type="text" name="passwd"><br>
+
+       <input type="submit" value="로그인" >
+       <button>로그인</button>
+       <input type="button" value="로그인" onclick="go()"> 
+     </form>
+
+  </body>
+</html>

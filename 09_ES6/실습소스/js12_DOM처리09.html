@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>hello</title>
+    <script>
+
+       function allCheck(){
+
+            var check= document.querySelector("#allCheck").checked;
+            // console.log(check);
+
+            var chk_list = document.querySelectorAll(".chk");
+            chk_list.forEach(function(v,idx){
+                   v.checked=check;
+            });
+       }
+
+       function total(){
+          
+           var chk_list = document.querySelectorAll("input:checked");
+            // console.log(chk_list);
+            var sum =0;
+            chk_list.forEach(function(v,idx){
+                //  console.log(v, idx);
+                // html 커스텀 속성인 data-price 접근은  dataset.price 형식으로 접근해서 사용한다.
+                console.dir(v.dataset.price);
+                sum += Number.parseInt(v.dataset.price);
+            });
+
+            document.querySelector("#result").innerHTML=sum;
+       }
+    
+    </script>
+  </head>
+  <body>
+    <table border="1">
+      <tr>
+        <th>
+          선택
+          <input type="checkbox" onclick="allCheck()" id="allCheck">
+        </th>
+        <th>상품명</th>
+        <th>가격</th>
+      </tr>
+      <tr>
+         <td><input type="checkbox" class="chk" data-price="2500"></td>
+        <td>사과</td>
+        <td>2500</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="chk" data-price="3500"></td>
+        <td>배</td>
+        <td>3500</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="chk" data-price="1500"></td>
+        <td>바나나</td>
+        <td>1500</td>
+      </tr>
+      <tr>
+        <td><input type="checkbox" class="chk" data-price="5500"></td>
+        <td>수박</td>
+        <td>5500</td>
+      </tr>
+    </table>
+    <button onclick="total()">총합구하기</button>
+    <div id="result"></div>
+  </body>
+</html>

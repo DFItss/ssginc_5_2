@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>hello</title>
+    <script>
+
+  //수정버튼 ==> 구글
+  //삭제버튼 ==> 다음
+     
+       function go(){
+          var btn = event.target.value;
+          console.log(btn);
+          var f = document.querySelector("#myForm");
+          if(btn == '수정'){
+            f.action="http://www.google.com";
+          }else{
+            f.action="http://www.daum.net";
+          }
+          f.submit();
+       }
+    
+    </script>
+  </head>
+  <body>
+  
+     <form action="target.html" id="myForm">
+       아이디: <input type="text" name="username"><br>
+       비번: <input type="text" name="passwd"><br>
+
+       <input type="button" value="수정" onclick="go()"> 
+       <input type="button" value="삭제" onclick="go()"> 
+     </form>
+
+  </body>
+</html>
