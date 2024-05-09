@@ -1050,3 +1050,37 @@ console.log(n === n2); //false,  identical 연산자 ( 값과 타입까지 비교 )
   2) <input> 태그같은 폼의 태그의 값 
 
      - value 속성 사용한다.
+
+
+
+
+3. 폼과 관련 내용 정리
+
+ 1) 기본내용
+
+    <form action="target.html" method="get|post" id="myForm">
+       아이디:<input />
+       
+	<input type="submit" value="로그인" >
+	<button>로그인</button>
+	<input type="button" value="로그인" > <== submit 안됨, JS이용하면 가능함.
+    </form>
+
+ 2) 동적으로 form의 속성값을 변경할 수 있다.
+
+    var f = document.querySelector("myForm");  // HTMLFormELEMENT 객체
+    f.action="구글";
+    f.method="get|post"
+
+    f.submit();
+
+ 3) submit은 기본으로 동작됨. 기본동작을 방지할 수 있다.
+
+    event.preventDefault();
+
+
+4.  객체분해할당 ( destructuring , ********************* X 201)
+
+  가. 배열 객체 분해 할당
+
+  나. JSON 객체 분해 할당 (******************)
