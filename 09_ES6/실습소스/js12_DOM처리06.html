@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>hello</title>
+
+    <script>
+ 
+       function chk(){
+
+           var chk = document.querySelector("#sameAddress");
+           console.dir(chk.checked);
+           if(chk.checked){
+            document.querySelector("#addr2").value = document.querySelector("#addr1").value;
+           }else{
+            document.querySelector("#addr2").value = "";  
+           }
+       }
+     
+    </script>
+  </head>
+  <body>
+    
+    회원주소: <input type="text" name="addr1" id="addr1" value="부산시"> <br>
+
+    배송지가 회원주소와 같다면 체크하시오. <br>
+    <input type="checkbox" name="sameAddress" id="sameAddress" onclick="chk()"> <br>
+
+    배송지주소:<input type="text" name="addr12" id="addr2" > <br>
+
+  </body>
+</html>
