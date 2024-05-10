@@ -1123,3 +1123,35 @@ console.log(n === n2); //false,  identical 연산자 ( 값과 타입까지 비교 )
 	 }
 
    - 메서드명 앞에 set/get 키워드를 지정하면 메서드가 아닌 변수처럼 동작됨.
+
+     예>  get getName(){
+             return this.name;
+          }
+
+	  p.getName; // 변수처럼 사용.
+
+   
+   - 생성자( constructor )
+
+     자바: 클래스명으로 생성자를 작성
+          오버로딩이 지정 가능
+
+     JS:  constructor 명으로 생성자를 작성
+          단 한번만 지정 가능
+
+    - 상속 (inheritance )
+      
+      extends 키워드 이용
+      부모요소를 자식이 상속받음.(생성자 상속안됨)
+      부모에서 선언된 변수는 반드시 부모에서 초기화해야 된다. super() 이용
+      예> class Cat extends Pet{
+	   constructor(name,age,gender){
+		  super(name, age); // 부모에서 초기화 필수
+		  this.name=name; // 에러발생
+		  this.gender=gender;
+         }
+     
+      메서드 재정의 가능.(overriding)
+      static 메서드 지원( 클래스명.메서드 사용, 객체생성과 무관)
+       
+      generator 함수사용 가능.
