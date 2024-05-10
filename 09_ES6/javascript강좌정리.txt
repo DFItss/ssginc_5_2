@@ -1155,3 +1155,40 @@ console.log(n === n2); //false,  identical 연산자 ( 값과 타입까지 비교 )
       static 메서드 지원( 클래스명.메서드 사용, 객체생성과 무관)
        
       generator 함수사용 가능.
+
+###########################################################################
+###########################################################################
+10장.  모듈 
+############################################################################
+
+1. 개념
+
+  - .js 파일 하나하나를 모듈이라고 부른다.
+  - 여러 js간에 접근해서 사용하려는 방법이고
+    만약에 main.js 에서  header.js를 접근하고자 한다면
+
+    main.js 에서는 import 사용하고
+    header.js 에서는 export 해야 된다.
+
+    하나의 js에서는 export 를 여러번 할 수 있다.
+                 export default 는 한번만 사용할 수 있다. 
+
+    export 된 요소를 import 하는 문법은 다음과 같다.
+     
+      import {요소, 요소2} from '경로';
+    
+    export default 된 요소를 import 하는 문법은 다음과 같다.
+
+     import 요소 from '경로';
+ 
+    export 와 export default 가 혼합된 요소를 import 하는 문법은 다음과 같다.
+
+    import 요소, {요소, 요소2} from '경로';
+
+
+    //변형된 import 로서 별칭지정 가능
+    // export 별칭지정
+    import {yyy as Y} from './body.js';
+
+    // export default 별칭지정
+    import {default as X} from './body.js';
