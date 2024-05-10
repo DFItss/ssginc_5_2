@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>hello</title>
+    <script>
+     
+    // 1.비동기 함수 생성
+    // 2. resolve, reject 함수 호출
+    //3.  resolve 호출에 대한 처리작업: then() 사용됨.
+    //    reject  호출에 대한 처리작업: catch() 사용됨
+
+    function fun(status){
+      return new Promise(function(resolve, reject){ // resolve: 성공시 호출, reject: 실패시 호출
+          console.log("1");
+          if(status == "ok"){
+            resolve();  // 성공인 경우 호출
+          }else{
+            reject();   // 실패인 경우 호출
+          }
+          console.log("2");
+        });  
+      }
+      
+      var result = fun("ok2");
+      // resolve 호출에 대한 처리작업: then() 사용됨.
+      // reject  호출에 대한 처리작업: catch() 사용됨
+      result.then()  // resolve호출시 실행됨
+            .catch() // reject호출시 실행됨
+            .finally(); // 무조건 실행됨.
+
+      console.log("result:", result);
+      console.log("end");
+      
+  
+    </script>
+  </head>
+  <body>
+   
+
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>hello</title>
+    <script>
+     
+    // 비동기 함수 생성
+
+    function fun(){
+      return new Promise(function(resolve, reject){ // resolve: 성공시 호출, reject: 실패시 호출
+          console.log("1");
+        });  
+      }
+      
+      var result = fun();
+      console.log("result:", result);
+      console.log("end");
+      
+  
+    </script>
+  </head>
+  <body>
+   
+
+  </body>
+</html>
