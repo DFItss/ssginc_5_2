@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>hello</title>
+    <script>
+     
+
+    function fun(status){
+      return new Promise(function(resolve, reject){ 
+          console.log("1");
+          if(status == "ok"){
+            resolve(100);    // 1. 임의의 서버와 연동해서 문자열 JSON을 받음, 예> "{age:20}"
+          }else{
+            reject();  
+          }
+          console.log("2");
+        });  
+      }
+      
+      var result = fun("ok");
+
+      result.then(function(n){
+                console.log("success", n);   // 2. 문자열 JSON ==> JSON  예> return JSON.parse()
+                return n+100;
+             }) 
+            .then(function(m){
+                console.log("success2",m);   // 3. {age:20} 에서 age이용해서 20을 얻음.
+             }) 
+            .catch(function(){
+              console.log("fail");
+            }) 
+            .finally(function(){
+              console.log("finally");
+            }); 
+
+      console.log("result:", result);
+      console.log("end");
+      
+  
+    </script>
+  </head>
+  <body>
+   
+
+  </body>
+</html>
