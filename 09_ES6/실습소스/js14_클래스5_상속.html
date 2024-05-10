@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>hello</title>
+    <script>
+     
+      
+      class Pet{
+
+         constructor(name,age){
+          this.name = name;
+          this.age = age;
+         }
+         setName(name){this.name=name;}
+         getName(){return this.name}
+         setAge(age){this.age=age;}
+         getAge(){return this.age;}
+         getPet(){return this.name+"\t"+this.age;}
+      }
+     
+       // Cat is a Pet. 상속관계
+      class Cat extends Pet{
+        constructor(name,age,gender){
+          super(name, age); // 부모에서 초기화 필수 (******************)
+          this.gender=gender;
+         }
+         setGender(gender){this.gender=gender;}
+         getGender(){return this.gender;}
+         //재정의
+         getPet(){return this.name+"\t"+this.age+"\t"+ this.gender;}
+      }
+
+      var cat1 = new Cat("야옹이",2,"암컷");
+      cat1.setName("야옹이2"); 
+  
+      // console.log(cat1.getName(), cat1.getAge(), cat1.getGender());
+      console.log(cat1.getPet());
+    </script>
+  </head>
+  <body>
+   
+
+  </body>
+</html>

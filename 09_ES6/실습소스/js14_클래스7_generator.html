@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>hello</title>
+    <script>
+     
+      
+     class Test{
+
+         // generator 메서드 
+          * info(){
+             console.log("1");
+             yield
+             console.log("2");
+          }
+
+     }
+
+     var t = new Test();
+     var gen = t.info();
+     console.log(gen);
+     gen.next()  // 1
+     gen.next()  // 2
+
+
+    </script>
+  </head>
+  <body>
+   
+
+  </body>
+</html>

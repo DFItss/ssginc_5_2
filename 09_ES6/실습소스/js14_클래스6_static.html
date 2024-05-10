@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>hello</title>
+    <script>
+     
+      
+     class Test{
+
+        //인스턴스 메서드
+        getMesg(){
+          return "getMesg";
+        }
+
+        //static 메서드 (정적메서드)
+        static getStaticMesg(){
+          return "getStaticMesg";
+        }
+
+     }
+
+     console.log(Test.getStaticMesg());
+
+     var t = new Test();
+     console.log(t.getMesg());
+
+     console.log( typeof Test);  // function
+
+    </script>
+  </head>
+  <body>
+   
+
+  </body>
+</html>
