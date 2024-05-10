@@ -1322,3 +1322,24 @@ console.log(n === n2); //false,  identical 연산자 ( 값과 타입까지 비교 )
 
      나. async + await + fetch() 이용 (***************)
          - https://reqres.in/api/users/2
+
+
+#####################################
+React.js에서 매우 많이 사용되는 코드 패턴
+1. arrow 함수
+2. 객체분해할당(특히 JSON )
+3. async, await 이용한 비동기처리
+   ==> 서버와 연동시 필수
+
+4. fetch() 함수
+  ==> 서버에 요청하는 함수
+  ==> 일반적으로  async, await와 같이 사용.
+
+5. 백티 사용
+6. 모듈
+   - import 및 export
+
+7. Array객체 메서드
+  - map함수
+  - filter함수
+  - foreach함수
