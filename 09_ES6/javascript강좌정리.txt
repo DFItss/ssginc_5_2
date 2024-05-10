@@ -1240,12 +1240,43 @@ console.log(n === n2); //false,  identical 연산자 ( 값과 타입까지 비교 )
 	  }
 	 #비동기 함수
 	   function fun(){
-		
-	     return new Promise(함수);
+	     //성공시 호출함수: resolve
+	     //실패시 호출함수: reject
+	     return new Promise(function(resolve, reject){});
 	   }
+
+      - 실제 구현
+        resolve 호출에 대한처리:  .then(function(){})
+
+	reject 호출에 대한처리:  .catch(function(){})
+
+
+      - then().then() 체인 가능 
+
 
    나. async/await 키워드 이용 (*************)
       -내부적으로 Promise 사용됨.
+
+      -문법:
+          
+	  # 일반함수 
+          function fun(){
+
+	  }
+
+          # 비동기함수 
+       async  function fun(){
+	      "1출력"
+	     ///////////////
+               xxx =  await fun2();  // await 함수가 실행이 끝날때까지 fun() 실행을 중지시킴.
+
+             ///////////////
+	      "2출력"
+	  }
+
+	 var result = fun();  // result 값이 Promise 객체이다.
+
+         
 
 ###########################################################################
 ###########################################################################
