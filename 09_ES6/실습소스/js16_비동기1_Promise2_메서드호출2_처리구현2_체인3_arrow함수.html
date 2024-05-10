@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>hello</title>
+    <script>
+     
+
+    function fun(status){
+      return new Promise(function(resolve, reject){ 
+          console.log("1");
+          if(status == "ok"){
+            //서버연동했다고 가정
+            var result = '{"age":20}';
+            resolve(result);    // 1. 임의의 서버와 연동해서 문자열 JSON을 받음, 예> "{age:20}"
+          }else{
+            reject();  
+          }
+          console.log("2");
+        });  
+      }
+      
+      var result = fun("ok");
+
+      // 다음과 같은 형식에 매우 익숙해져야 된다.
+      result.then((n)=>JSON.parse(n)) 
+            .then(m=>console.log("success2",m.age))  
+            .catch(()=>console.log("fail")) 
+            .finally(()=>console.log("finally")); 
+
+      console.log("result:", result);
+      console.log("end");
+      
+  
+    </script>
+  </head>
+  <body>
+   
+
+  </body>
+</html>
