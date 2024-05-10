@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>hello</title>
+    <script>
+     
+     // async 와 await 사용
+     // async 기능: 함수를 비동기 함수로 만듬.
+     // await 기능: async 함수내의 처리를 wait 시킴. await 로 지정된 함수가 끝나때까지.
+
+     var result;
+     async function asyncFun(){
+        console.log("1");
+    
+        result = await (function(){console.log("await 함수"); return 100;})(); 
+
+        console.log("end");
+        console.log("내부에서 result:", result);
+
+        // return 값;   .then() 으로 얻는다.
+     }
+
+     var promise = asyncFun();
+
+     console.log("외부에서 result:", result);
+  
+     /*
+       - await 지정하지 않은 경우 실행 결과
+          1
+          await 함수
+          end
+          내부에서 result: 100
+          외부에서 result: 100
+          
+       - await 지정한 경우 실행 결과
+          1 
+         await 함수
+         외부에서 result:", undefined
+         end
+         내부에서 result: 100
+
+
+     */
+
+
+
+    </script>
+  </head>
+  <body>
+   
+
+  </body>
+</html>
